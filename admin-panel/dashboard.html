@@ -97,7 +97,7 @@
                     </button>
                     <button id="publish-btn" class="btn-publish" disabled>
                         <i class="fas fa-cloud-upload-alt"></i>
-                        Publicar no Netlify
+                        Publicar no GitHub
                     </button>
                 </div>
             </div>
@@ -256,25 +256,23 @@
     <div id="settings-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2><i class="fas fa-cog"></i> Configurações do Netlify</h2>
+                <h2><i class="fas fa-cog"></i> Configurações do GitHub</h2>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <label for="site-id">
-                        <i class="fas fa-globe"></i>
-                        Site ID do Netlify
-                    </label>
-                    <input type="text" id="site-id" placeholder="Ex: abc123-def456-ghi789">
-                    <small>Encontre em: Site Settings → General → Site ID</small>
-                </div>
-                <div class="form-group">
-                    <label for="access-token">
                         <i class="fas fa-key"></i>
-                        Personal Access Token
+                        GitHub Personal Access Token
                     </label>
-                    <input type="password" id="access-token" placeholder="Seu token pessoal do Netlify">
-                    <small>Criar em: User Settings → Applications → Personal Access Tokens</small>
+                    <input type="password" id="site-id" placeholder="ghp_...">
+                    <small style="display: block; margin-top: 8px; color: #666;">
+                        <strong>Como criar:</strong><br>
+                        1. Acesse: <a href="https://github.com/settings/tokens" target="_blank" style="color: var(--primary);">github.com/settings/tokens</a><br>
+                        2. Clique em "Generate new token (classic)"<br>
+                        3. Marque a permissão <strong>"repo"</strong> (Full control)<br>
+                        4. Cole o token aqui
+                    </small>
                 </div>
                 <div class="form-group">
                     <label for="admin-password">

@@ -8,8 +8,13 @@ let productsData = null;
 let originalData = null;
 let hasChanges = false;
 
-// ===== CONFIGURAÇÕES =====
-const NETLIFY_FUNCTION_URL = 'https://acaiecia.netlify.app/.netlify/functions/update-products';
+// ===== CONFIGURAÇÕES GITHUB =====
+const GITHUB_CONFIG = {
+    owner: 'gabrielfavera07',
+    repo: 'acaiecia',
+    branch: 'main',
+    filePath: 'products_with_prices.json'
+};
 
 // ===== URL DO PRODUCTS JSON =====
 const PRODUCTS_JSON_URL = 'https://acaiecia.netlify.app/products_with_prices.json';
@@ -240,8 +245,8 @@ logoutBtn.addEventListener('click', () => {
 // ===== MODAL DE CONFIGURAÇÕES =====
 settingsBtn.addEventListener('click', () => {
     settingsModal.classList.add('active');
-    document.getElementById('site-id').value = localStorage.getItem('netlifySiteId') || '';
-    document.getElementById('access-token').value = localStorage.getItem('netlifyAccessToken') || '';
+    document.getElementById('site-id').value = localStorage.getItem('githubToken') || '';
+    document.getElementById('access-token').value = ''; // Não mostrar o token por segurança
 });
 
 document.querySelector('.modal-close').addEventListener('click', () => {
@@ -255,27 +260,33 @@ settingsModal.addEventListener('click', (e) => {
 });
 
 saveSettingsBtn.addEventListener('click', () => {
-    const siteId = document.getElementById('site-id').value.trim();
-    const accessToken = document.getElementById('access-token').value.trim();
+    const githubToken = document.getElementById('site-id').value.trim();
     const newPassword = document.getElementById('admin-password').value.trim();
     
-    if (siteId) localStorage.setItem('netlifySiteId', siteId);
-    if (accessToken) localStorage.setItem('netlifyAccessToken', accessToken);
-    if (newPassword) localStorage.setItem('adminPassword', newPassword);
+    if (githubToken) {
+        localStorage.setItem('githubToken', githubToken);
+        showMessage('GitHub Token salvo com sucesso!', 'success');
+    }
+    if (newPassword) {
+        localStorage.setItem('adminPassword', newPassword);
+        showMessage('Senha atualizada com sucesso!', 'success');
+    }
     
     settingsModal.classList.remove('active');
-    showMessage('Configurações salvas com sucesso!', 'success');
-    
-    if (siteId && accessToken && hasChanges) {
-        publishBtn.disabled = false;
-    }
 });
 
-// ===== PUBLICAR NO GITHUB (VIA NETLIFY FUNCTION) =====
+// ===== PUBLICAR NO GITHUB (DIRETAMENTE DO NAVEGADOR) =====
 publishBtn.addEventListener('click', async () => {
-    console.log('🚀 Iniciando publicação via Netlify Function...');
+    console.log('🚀 Iniciando publicação direta no GitHub...');
     
     if (!confirm('Deseja publicar as alterações? Esta ação fará commit no GitHub e o Netlify atualizará automaticamente em segundos.')) {
+        return;
+    }
+    
+    const githubToken = localStorage.getItem('githubToken');
+    if (!githubToken) {
+        showMessage('⚠️ GitHub Token não configurado! Configure nas Configurações.', 'error');
+        settingsModal.classList.add('active');
         return;
     }
     
@@ -283,33 +294,59 @@ publishBtn.addEventListener('click', async () => {
         publishBtn.disabled = true;
         publishBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
         
-        console.log('📦 Enviando dados para a function...');
-        console.log('Tamanho do JSON:', JSON.stringify(productsData).length, 'caracteres');
+        // 1. Obter o SHA do arquivo atual
+        console.log('� Obtendo SHA do arquivo atual...');
+        const fileInfoUrl = `https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/contents/${GITHUB_CONFIG.filePath}?ref=${GITHUB_CONFIG.branch}`;
         
-        // Chamar a Netlify Function
-        const response = await fetch(NETLIFY_FUNCTION_URL, {
-            method: 'POST',
+        const fileInfoResponse = await fetch(fileInfoUrl, {
             headers: {
+                'Authorization': `Bearer ${githubToken}`,
+                'Accept': 'application/vnd.github.v3+json'
+            }
+        });
+        
+        if (!fileInfoResponse.ok) {
+            throw new Error(`Erro ao obter informações do arquivo: ${fileInfoResponse.status}`);
+        }
+        
+        const fileInfo = await fileInfoResponse.json();
+        const currentSha = fileInfo.sha;
+        console.log('✅ SHA atual:', currentSha);
+        
+        // 2. Preparar o conteúdo em Base64
+        console.log('📦 Preparando conteúdo...');
+        const jsonContent = JSON.stringify(productsData, null, 2);
+        const base64Content = btoa(unescape(encodeURIComponent(jsonContent)));
+        
+        // 3. Fazer commit
+        console.log('💾 Enviando commit...');
+        const updateUrl = `https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/contents/${GITHUB_CONFIG.filePath}`;
+        
+        const updateResponse = await fetch(updateUrl, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${githubToken}`,
+                'Accept': 'application/vnd.github.v3+json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                products: productsData
+                message: `🔄 Atualização de produtos via Admin Panel - ${new Date().toLocaleString('pt-BR')}`,
+                content: base64Content,
+                sha: currentSha,
+                branch: GITHUB_CONFIG.branch
             })
         });
         
-        console.log('📨 Response status:', response.status);
-        
-        if (!response.ok) {
-            const errorData = await response.json();
-            console.error('❌ Erro na resposta:', errorData);
-            throw new Error(errorData.error || 'Erro ao publicar');
+        if (!updateResponse.ok) {
+            const errorData = await updateResponse.json();
+            console.error('❌ Erro no commit:', errorData);
+            throw new Error(errorData.message || 'Erro ao fazer commit');
         }
         
-        const result = await response.json();
-        console.log('✅ Resposta da function:', result);
+        const result = await updateResponse.json();
+        console.log('✅ Commit realizado:', result);
         
         publishBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ⏳ Aguardando Netlify...';
-        
         showMessage('✅ Commit realizado! Netlify está fazendo deploy...', 'success');
         
         // Aguardar alguns segundos
