@@ -440,39 +440,52 @@ document.addEventListener('DOMContentLoaded', () => {
         let formatted = '';
         
         if (customizations.talher) {
-            formatted += `   • Talher: ${customizations.talher === 'sim' ? 'Sim' : 'Não'}\n`;
+            formatted += `   •${customizations.talher === 'sim' ? 'Sim' : 'Não'}\n`;
         }
         
         if (customizations.saborAcai) {
-            formatted += `   • Sabor: ${customizations.saborAcai}\n`;
+            const sabores = customizations.saborAcai.split(',');
+            sabores.forEach(sabor => {
+                formatted += `•${sabor.trim()}\n`;
+            });
         }
         
         if (customizations.separacao) {
-            formatted += `   • Forma: ${customizations.separacao === 'separado' ? 'Separado (+R$ 4,00)' : 'Dentro do copo'}\n`;
+            formatted += `•${customizations.separacao === 'separado' ? 'Separado (+R$ 4,00)' : 'Dentro do copo'}\n`;
         }
         
         if (customizations.acompanhamentos && customizations.acompanhamentos.length > 0) {
-            formatted += `   • Acompanhamentos: ${customizations.acompanhamentos.join(', ')}\n`;
+            customizations.acompanhamentos.forEach(item => {
+                formatted += `• ${item}\n`;
+            });
         }
         
         if (customizations.adicionais && customizations.adicionais.length > 0) {
-            formatted += `   • Adicionais: ${customizations.adicionais.join(', ')}\n`;
+            customizations.adicionais.forEach(item => {
+                formatted += `• ${item}\n`;
+            });
         }
         
         if (customizations.salgados && customizations.salgados.length > 0) {
-            formatted += `   • Salgados: ${customizations.salgados.join(', ')}\n`;
+            customizations.salgados.forEach(item => {
+                formatted += `• ${item}\n`;
+            });
         }
         
         if (customizations.molhos && customizations.molhos.length > 0) {
-            formatted += `   • Molhos: ${customizations.molhos.join(', ')}\n`;
+            customizations.molhos.forEach(item => {
+                formatted += `•${item}\n`;
+            });
         }
         
         if (customizations.bebidas && customizations.bebidas.length > 0) {
-            formatted += `   • Extras: ${customizations.bebidas.join(', ')}\n`;
+            customizations.bebidas.forEach(item => {
+                formatted += `•${item}\n`;
+            });
         }
         
         if (customizations.refrigerante) {
-            formatted += `   • Refrigerante: ${customizations.refrigerante}\n`;
+            formatted += `• ${customizations.refrigerante}\n`;
         }
         
         return formatted;
@@ -480,37 +493,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para enviar pedido para WhatsApp
     function sendToWhatsApp(address, paymentData) {
-        let message = `*🛒 Pedido - AÇAI E CIA*\n\n`;
+        let message = `🛒 Pedido - AÇAI E CIA\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         
         // Adicionar link do Google Maps se houver coordenadas
         if (address.latitude && address.longitude) {
             message += `   📌 Ver no mapa:\n`;
             message += `   https://www.google.com/maps?q=${address.latitude},${address.longitude}\n`;
-            message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+            message += `━━━━━━━━━━━━━━━━━━━━\n`;
         }
+        
+        message += `Itens do pedido\n \n`;
         
         // Adicionar itens do pedido
         cart.forEach((item, index) => {
-            message += `*${index + 1}.\n\n *${item.quantity}x UNIDADE(S) DE:*\n\n ${item.name}*\n`;
-            message += `   💰 R$ ${item.price.toFixed(2)} cada\n`;
+            message += `${item.quantity}x UNIDADE(S) DE:\n${item.name} \n`;
             
             if (item.customizations) {
-                message += `\n   📋 *Personalizações:*\n`;
                 message += formatCustomizations(item.customizations);
             }
             
-            message += `   *Subtotal: R$ ${(item.price * item.quantity).toFixed(2)}*\n\n`;
-            message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+            message += `   \nSubtotal: R$ ${(item.price * item.quantity).toFixed(2)}\n\n`;
         });
         
         // Total
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        message += `*💵 TOTAL: R$ ${total.toFixed(2)}*\n\n`;
+        message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+        message += `💵 TOTAL: R$ ${total.toFixed(2)}+ Frete\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
         
         // Endereço de entrega
-        message += `*📍 Endereço de Entrega:*\n`;
+        message += `📍 Endereço de Entrega:\n`;
         if (address.apelido) {
             message += `   ${address.apelido}\n`;
         }
@@ -529,7 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Forma de pagamento
         if (paymentData) {
-            message += `*💰 Forma de Pagamento:*\n`;
+            message += `💰 Forma de Pagamento:\n`;
             
             const paymentLabels = {
                 'credito': 'Cartão de Crédito 💳',
