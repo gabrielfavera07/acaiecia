@@ -444,9 +444,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         if (customizations.saborAcai) {
-            const sabores = customizations.saborAcai.split(',');
+            // Verifica se é array ou string
+            const sabores = Array.isArray(customizations.saborAcai) 
+                ? customizations.saborAcai 
+                : customizations.saborAcai.split(',');
             sabores.forEach(sabor => {
-                formatted += `•${sabor.trim()}\n`;
+                formatted += `•${sabor.trim()}\\n`;
             });
         }
         
