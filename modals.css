@@ -2065,6 +2065,45 @@ button {
 }
 
 /* ========================================
+   BOTÃO ADICIONAR OUTROS ITENS NO CARRINHO
+   ======================================== */
+.add-more-items-btn {
+    width: 100%;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, rgba(74, 14, 78, 0.08), rgba(107, 27, 109, 0.08));
+    color: var(--primary-color);
+    padding: 14px 24px;
+    border: 2px solid rgba(74, 14, 78, 0.3);
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(74, 14, 78, 0.1);
+}
+
+.add-more-items-btn:hover {
+    background: linear-gradient(135deg, rgba(74, 14, 78, 0.15), rgba(107, 27, 109, 0.15));
+    border-color: var(--primary-color);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(74, 14, 78, 0.25);
+}
+
+.add-more-items-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(74, 14, 78, 0.15);
+}
+
+.add-more-items-btn i {
+    font-size: 1.125rem;
+}
+
+/* ========================================
    RESPONSIVIDADE
    ======================================== */
 @media (max-width: 768px) {

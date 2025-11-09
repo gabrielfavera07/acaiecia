@@ -17,9 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Fetch and Render Products ---
     function fetchProducts() {
+        // Consumir JSON diretamente do GitHub Raw (atualização em tempo real)
         // Adicionar timestamp para evitar cache e sempre carregar a versão mais recente
         const cacheBuster = new Date().getTime();
-        fetch(`products_with_prices.json?v=${cacheBuster}`)
+        const jsonUrl = window.CONFIG ? window.CONFIG.jsonUrl : 'https://raw.githubusercontent.com/gabrielfavera07/acaiecia/main/products_with_prices.json';
+        
+        fetch(`${jsonUrl}?v=${cacheBuster}`)
             .then(response => response.json())
             .then(data => {
                 restaurantData = data.restaurante;
@@ -433,6 +436,12 @@ document.addEventListener('DOMContentLoaded', () => {
     closeCartBtn.addEventListener('click', toggleCart);
     cartOverlay.addEventListener('click', toggleCart);
 
+    // Botão "Adicionar outros itens" fecha o modal
+    const addMoreItemsBtn = document.querySelector('.add-more-items-btn');
+    if (addMoreItemsBtn) {
+        addMoreItemsBtn.addEventListener('click', toggleCart);
+    }
+
     // Função para formatar customizações para WhatsApp
     function formatCustomizations(customizations) {
         if (!customizations) return '';
@@ -440,7 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let formatted = '';
         
         if (customizations.talher) {
-            formatted += `   • ${customizations.talher === 'sim' ? 'Sim' : 'Não'}\n`;
+            formatted += `   • ${customizations.talher === 'sim' ? 'Sim, preciso de talher' : 'Não precisa de talher'}\n`;
         }
         
         if (customizations.saborAcai) {
@@ -496,12 +505,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para enviar pedido para WhatsApp
     function sendToWhatsApp(address, paymentData) {
-        let message = `*\uD83D\uDED2 Pedido - AÇAI E CIA*\n\n`;
+        let message = `*🛒 Pedido - AÇAI E CIA*\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         
         // Adicionar link do Google Maps se houver coordenadas
         if (address.latitude && address.longitude) {
-            message += `   \uD83D\uDCCC Ver no mapa:\n`;
+            message += `   📌  Ver no mapa:\n`;
             message += `   https://www.google.com/maps?q=${address.latitude},${address.longitude}\n`;
             message += `━━━━━━━━━━━━━━━━━━━━\n`;
         }
@@ -522,11 +531,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Total
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
-        message += `*\uD83D\uDCB5 TOTAL: R$ ${total.toFixed(2)}+ Frete*\n\n`;
+        message += `*💵 TOTAL: R$ ${total.toFixed(2)}+ Frete*\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
         
         // Endereço de entrega
-        message += `\uD83D\uDCCD *Endereço de Entrega:*\n`;
+        message += `📍 *Endereço de Entrega:*\n`;
         if (address.apelido) {
             message += `   ${address.apelido}\n`;
         }
@@ -545,20 +554,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Forma de pagamento
         if (paymentData) {
-            message += `\uD83D\uDCB0 *Forma de Pagamento:*\n`;
+            message += `💰 *Forma de Pagamento:*\n`;
             
             const paymentLabels = {
-                'credito': 'Cartão de Crédito \uD83D\uDCB3',
-                'debito': 'Cartão de Débito \uD83D\uDCB3',
-                'dinheiro': 'Dinheiro \uD83D\uDCB5',
-                'pix': 'PIX \uD83D\uDCF1'
+                'credito': 'Cartão de Crédito 💳',
+                'debito': 'Cartão de Débito 💳',
+                'dinheiro': 'Dinheiro 💵',
+                'pix': 'PIX 📱'
             };
             
             message += `   ${paymentLabels[paymentData.method] || paymentData.method}\n`;
             
             if (paymentData.method === 'dinheiro') {
                 if (paymentData.needsChange) {
-                    message += `   \uD83D\uDCB5 Levar troco para: R$ ${parseFloat(paymentData.changeAmount).toFixed(2)}\n`;
+                    message += `   💵 Levar troco para: R$ ${parseFloat(paymentData.changeAmount).toFixed(2)}\n`;
                 } else {
                     message += `   ✓ Pagamento com valor exato\n`;
                 }
@@ -567,7 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message += `\n━━━━━━━━━━━━━━━━━━━━\n\n`;
         }
         
-        message += `Obrigado pela preferência! \uD83D\uDE4F`;
+        message += `Obrigado pela preferência! 🙏`;
         
         // Enviar para WhatsApp
         const whatsappNumber = restaurantData?.telefone?.replace(/\D/g, '') || '5521987943015';
@@ -741,21 +750,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Modify fetchProducts to also populate sticky menu
-    function fetchProducts() {
-        // Adicionar timestamp para evitar cache e sempre carregar a versão mais recente
-        const cacheBuster = new Date().getTime();
-        fetch(`products_with_prices.json?v=${cacheBuster}`)
-            .then(response => response.json())
-            .then(data => {
-                restaurantData = data.restaurante;
-                allCategories = data.categorias || [];
-                populateCategories();
-                populateStickyCategoryMenu(); // Add sticky menu population
-                renderProducts(); // Render all products initially
-            })
-            .catch(error => console.error('Error loading products:', error));
-    }
 
     // --- Initial Load ---
     fetchProducts();

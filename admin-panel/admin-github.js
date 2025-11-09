@@ -16,8 +16,9 @@ const GITHUB_CONFIG = {
     filePath: 'products_with_prices.json'
 };
 
-// ===== URL DO PRODUCTS JSON =====
-const PRODUCTS_JSON_URL = 'https://acaiecia.netlify.app/products_with_prices.json';
+// ===== URL DO PRODUCTS JSON (GitHub Raw) =====
+// Consome JSON diretamente do GitHub para atualização em tempo real
+const PRODUCTS_JSON_URL = 'https://raw.githubusercontent.com/gabrielfavera07/acaiecia/main/products_with_prices.json';
 
 // ===== ELEMENTOS DO DOM =====
 const productsContainer = document.getElementById('products-container');
@@ -82,7 +83,9 @@ async function loadProducts() {
     try {
         productsContainer.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i><p>Carregando produtos...</p></div>';
         
-        const response = await fetch(PRODUCTS_JSON_URL);
+        // Cache busting para evitar cache desatualizado
+        const cacheBuster = new Date().getTime();
+        const response = await fetch(`${PRODUCTS_JSON_URL}?v=${cacheBuster}`);
         if (!response.ok) throw new Error('Erro ao carregar produtos');
         
         productsData = await response.json();
@@ -294,9 +297,10 @@ publishBtn.addEventListener('click', async () => {
         publishBtn.disabled = true;
         publishBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
         
-        // 1. Obter o SHA do arquivo atual
-        console.log('� Obtendo SHA do arquivo atual...');
-        const fileInfoUrl = `https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/contents/${GITHUB_CONFIG.filePath}?ref=${GITHUB_CONFIG.branch}`;
+        // 1. Obter o SHA do arquivo atual (sem cache)
+        console.log('📄 Obtendo SHA do arquivo atual...');
+        const cacheBuster = new Date().getTime();
+        const fileInfoUrl = `https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/contents/${GITHUB_CONFIG.filePath}?ref=${GITHUB_CONFIG.branch}&t=${cacheBuster}`;
         
         const fileInfoResponse = await fetch(fileInfoUrl, {
             headers: {
