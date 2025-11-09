@@ -1,9 +1,26 @@
 // Netlify Function para atualizar products_with_prices.json no GitHub
 exports.handler = async (event, context) => {
+    // Headers CORS
+    const headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS'
+    };
+
+    // Responder ao preflight request
+    if (event.httpMethod === 'OPTIONS') {
+        return {
+            statusCode: 200,
+            headers,
+            body: ''
+        };
+    }
+
     // Permitir apenas POST
     if (event.httpMethod !== 'POST') {
         return {
             statusCode: 405,
+            headers,
             body: JSON.stringify({ error: 'Method not allowed' })
         };
     }
@@ -17,6 +34,7 @@ exports.handler = async (event, context) => {
         if (!GITHUB_TOKEN) {
             return {
                 statusCode: 500,
+                headers,
                 body: JSON.stringify({ error: 'GitHub token not configured' })
             };
         }
@@ -27,6 +45,7 @@ exports.handler = async (event, context) => {
         if (!products) {
             return {
                 statusCode: 400,
+                headers,
                 body: JSON.stringify({ error: 'Products data not provided' })
             };
         }
@@ -74,6 +93,7 @@ exports.handler = async (event, context) => {
             const errorText = await commitResponse.text();
             return {
                 statusCode: commitResponse.status,
+                headers,
                 body: JSON.stringify({ error: 'GitHub commit failed', details: errorText })
             };
         }
@@ -82,6 +102,7 @@ exports.handler = async (event, context) => {
 
         return {
             statusCode: 200,
+            headers,
             body: JSON.stringify({
                 success: true,
                 message: 'Commit realizado com sucesso',
@@ -93,6 +114,7 @@ exports.handler = async (event, context) => {
         console.error('Error:', error);
         return {
             statusCode: 500,
+            headers,
             body: JSON.stringify({ error: error.message })
         };
     }
