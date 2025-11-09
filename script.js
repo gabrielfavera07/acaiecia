@@ -496,12 +496,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para enviar pedido para WhatsApp
     function sendToWhatsApp(address, paymentData) {
-        let message = `*🛒 Pedido - AÇAI E CIA*\n\n`;
+        let message = `*\uD83D\uDED2 Pedido - AÇAI E CIA*\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         
         // Adicionar link do Google Maps se houver coordenadas
         if (address.latitude && address.longitude) {
-            message += `   📌 Ver no mapa:\n`;
+            message += `   \uD83D\uDCCC Ver no mapa:\n`;
             message += `   https://www.google.com/maps?q=${address.latitude},${address.longitude}\n`;
             message += `━━━━━━━━━━━━━━━━━━━━\n`;
         }
@@ -522,11 +522,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Total
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
-        message += `*💵 TOTAL: R$ ${total.toFixed(2)}+ Frete*\n\n`;
+        message += `*\uD83D\uDCB5 TOTAL: R$ ${total.toFixed(2)}+ Frete*\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
         
         // Endereço de entrega
-        message += `📍 *Endereço de Entrega:*\n`;
+        message += `\uD83D\uDCCD *Endereço de Entrega:*\n`;
         if (address.apelido) {
             message += `   ${address.apelido}\n`;
         }
@@ -545,20 +545,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Forma de pagamento
         if (paymentData) {
-            message += `💰 *Forma de Pagamento:*\n`;
+            message += `\uD83D\uDCB0 *Forma de Pagamento:*\n`;
             
             const paymentLabels = {
-                'credito': 'Cartão de Crédito 💳',
-                'debito': 'Cartão de Débito 💳',
-                'dinheiro': 'Dinheiro 💵',
-                'pix': 'PIX 📱'
+                'credito': 'Cartão de Crédito \uD83D\uDCB3',
+                'debito': 'Cartão de Débito \uD83D\uDCB3',
+                'dinheiro': 'Dinheiro \uD83D\uDCB5',
+                'pix': 'PIX \uD83D\uDCF1'
             };
             
             message += `   ${paymentLabels[paymentData.method] || paymentData.method}\n`;
             
             if (paymentData.method === 'dinheiro') {
                 if (paymentData.needsChange) {
-                    message += `   💵 Levar troco para: R$ ${parseFloat(paymentData.changeAmount).toFixed(2)}\n`;
+                    message += `   \uD83D\uDCB5 Levar troco para: R$ ${parseFloat(paymentData.changeAmount).toFixed(2)}\n`;
                 } else {
                     message += `   ✓ Pagamento com valor exato\n`;
                 }
@@ -567,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message += `\n━━━━━━━━━━━━━━━━━━━━\n\n`;
         }
         
-        message += `Obrigado pela preferência! 🙏`;
+        message += `Obrigado pela preferência! \uD83D\uDE4F`;
         
         // Enviar para WhatsApp
         const whatsappNumber = restaurantData?.telefone?.replace(/\D/g, '') || '5521987943015';
