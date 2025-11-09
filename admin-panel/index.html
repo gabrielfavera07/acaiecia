@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Painel Admin | Açaí & Cia</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-lock"></i>
+                <h1>Painel Administrativo</h1>
+                <p>Açaí & Cia</p>
+            </div>
+            
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-key"></i>
+                        Senha de Acesso
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Digite a senha do painel"
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+                
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Entrar
+                </button>
+                
+                <div id="error-message" class="error-message" style="display: none;">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="error-text"></span>
+                </div>
+            </form>
+            
+            <div class="login-footer">
+                <p><i class="fas fa-info-circle"></i> Para obter acesso, entre em contato com o administrador</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Senha padrão (pode ser alterada)
+        const DEFAULT_PASSWORD = 'admin123';
+        
+        // Verificar se já está logado
+        if (localStorage.getItem('adminLoggedIn') === 'true') {
+            window.location.href = 'dashboard.html';
+        }
+        
+        // Manipular submit do formulário
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            const errorText = document.getElementById('error-text');
+            
+            // Verificar senha
+            const storedPassword = localStorage.getItem('adminPassword') || DEFAULT_PASSWORD;
+            
+            if (password === storedPassword) {
+                // Login bem-sucedido
+                localStorage.setItem('adminLoggedIn', 'true');
+                window.location.href = 'dashboard.html';
+            } else {
+                // Senha incorreta
+                errorText.textContent = 'Senha incorreta. Tente novamente.';
+                errorMessage.style.display = 'flex';
+                document.getElementById('password').value = '';
+                document.getElementById('password').focus();
+                
+                // Esconder mensagem após 3 segundos
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

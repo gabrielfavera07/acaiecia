@@ -1,0 +1,28 @@
+# Configuração Netlify para o Painel Admin
+
+[build]
+  publish = "."
+  command = "echo 'Admin panel ready for deployment'"
+
+# Configuração de headers de segurança
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+
+# Redirect para HTTPS
+[[redirects]]
+  from = "http://acaiecia-julioadmin.netlify.app/*"
+  to = "https://acaiecia-julioadmin.netlify.app/:splat"
+  status = 301
+  force = true
+
+# Proteção básica com senha (opcional - descomente para ativar)
+# [[redirects]]
+#   from = "/*"
+#   to = "/.netlify/functions/auth"
+#   status = 200
+#   force = false
+#   conditions = {Role = ["admin"]}

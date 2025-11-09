@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AÇAÍ & CIA - O melhor açaí da Região Oceânica está aqui!</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Experimente nosso açaí artesanal batido, o açaí cremoso estilo sorvete, e ainda curta uma variedade incrível de sorvetes e lanches irresistíveis!">
+    <meta name="theme-color" content="#4A0E4E">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AÇAÍ & CIA">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modals.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Leaflet CSS for Interactive Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <!-- Banner de Taxa de Entrega -->
+    <div class="delivery-banner">
+        <div class="container">
+            <i class="fas fa-motorcycle"></i>
+            <span>Consulte a taxa de entrega para sua região pelo WhatsApp</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo"><img src="IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png" alt="Fui Pra Minas Logo"></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li class="dropdown">
+                        <a href="#produtos" class="category-link">Categorias <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu" id="category-dropdown">
+                            <!-- Categories will be loaded here -->
+                        </div>
+                    </li>
+                    <li><a href="#produtos" id="all-products-link">Todos os Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" id="cart-icon-header">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">O melhor açaí da Região Oceânica está aqui!</h1>
+                <p class="hero-subtitle">Experimente nosso açaí artesanal batido, o açaí cremoso estilo sorvete, e ainda curta uma variedade incrível de sorvetes e lanches irresistíveis!</p>
+                <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
+            </div>
+        </section>
+
+        <!-- Sticky Category Menu -->
+        <div class="sticky-category-menu" id="sticky-category-menu">
+            <div class="container">
+                <div class="category-menu-scroll" id="category-menu-scroll">
+                    <!-- Categories will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <section class="products-section" id="produtos">
+            <div class="container">
+                <div class="products-header">
+                    <h2 class="section-title">Nossos Produtos</h2>
+                    <div class="view-toggle">
+                        <button class="view-toggle-btn active" data-view="grid" title="Visualização em grade">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-toggle-btn" data-view="list" title="Visualização em lista">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="product-list" class="product-grid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png" alt="Fui Pra Minas Logo" style="height: 60px; margin-bottom: 15px;">
+                    <p>Delivery de Qualidade Incrível. Produtos selecionados com a mais alta qualidade e sabor único!</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FUI PRA MINAS COM IGOR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-cart-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+            <button class="btn btn-primary checkout-button">Finalizar Compra</button>
+        </div>
+    </aside>
+    <div class="cart-overlay"></div>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5521982547599?text=Olá!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20pedido."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.832.748 5.492 2.048 7.792L0 32l8.416-2.084C10.66 31.268 13.248 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.332c-2.496 0-4.828-.684-6.832-1.868l-.492-.292-5.088 1.26 1.292-4.956-.32-.516C3.184 21.004 2.668 18.56 2.668 16 2.668 8.636 8.636 2.668 16 2.668S29.332 8.636 29.332 16 23.364 29.332 16 29.332zm7.332-9.996c-.404-.2-2.38-1.172-2.748-1.308-.368-.132-.636-.2-.904.2-.268.404-1.04 1.308-1.276 1.576-.236.268-.472.3-.876.1-.404-.2-1.704-.628-3.248-2.004-1.2-1.068-2.012-2.388-2.248-2.792-.236-.404-.024-.624.176-.824.18-.18.404-.472.608-.708.2-.236.268-.404.404-.672.132-.268.068-.5-.032-.7-.1-.2-.904-2.172-1.24-2.976-.328-.78-.66-.672-.904-.684-.236-.012-.504-.016-.772-.016s-.708.1-1.076.5c-.368.404-1.408 1.376-1.408 3.356s1.44 3.892 1.64 4.16c.2.268 2.832 4.324 6.86 6.064.956.412 1.704.66 2.288.844.96.308 1.836.264 2.528.16.772-.116 2.38-.972 2.716-1.912.336-.94.336-1.748.236-1.912-.1-.168-.368-.268-.772-.468z" fill="currentColor"/>
+        </svg>
+    </a>
+
+    <!-- Leaflet JS for Interactive Maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- PWA Installation Script -->
+    <script src="pwa-install.js"></script>
+    
+    <script src="modal-customization.js"></script>
+    <script src="modal-address.js"></script>
+    <script src="modal-map-payment.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

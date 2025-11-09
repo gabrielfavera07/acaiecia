@@ -1,0 +1,27 @@
+# Configuração Netlify para o Site Principal
+
+[build]
+  publish = "."
+  command = "echo 'Site ready'"
+
+# Headers CORS - Permitir acesso do painel admin
+[[headers]]
+  for = "/products_with_prices.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+
+# Headers CORS para complementos
+[[headers]]
+  for = "/complementos_config.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+
+# Cache para JSON (opcional - 5 minutos)
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

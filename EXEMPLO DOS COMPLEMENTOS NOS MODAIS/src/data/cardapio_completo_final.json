@@ -1,0 +1,459 @@
+{
+  "restaurante": {
+    "id": "d9300296-0db8-4a3b-93ec-a1e9c8cd0deb",
+    "nome": "Açaí & Cia",
+    "descricao": "Vai ser o melhor momento do seu dia!🥰.Estamos entre os melhores restaurantes da região 🤩.Açaí 100% natural e artesanal❤️",
+    "avaliacao": 4.7,
+    "avaliacoes_total": 209,
+    "pedido_minimo": 10.0,
+    "endereco": "Rua Francisca Lopes de Souza 0, Engenho do Mato - NITEROI, RJ",
+    "telefone": "+5521982547599"
+  },
+  "categorias": [
+    {
+      "nome": "Açaí e sorvete",
+      "itens": [
+        {
+          "nome": "Açaí ou sorvete 300 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso açaí ou sorvete. Oferecemos tanto o autêntico açaí artesanal quanto o açaí industrializado de alta qualidade. Somos renomados em toda a região por servir o melhor açaí, uma verdadeira delícia que não pode ser perdida. Venha provar esta maravilha que é um verdadeiro deleite para o paladar.",
+          "preco_original": 17.0,
+          "preco_venda": 15.99,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202203222305_A4WE_i.jpg",
+          "imagem_local": "imagens\\A_a__ou_sorvete_300_ml_1.jpg"
+        },
+        {
+          "nome": "Açaí ou sorvete 400 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso açaí ou sorvete. Oferecemos tanto o autêntico açaí artesanal quanto o açaí industrializado de alta qualidade. Somos renomados em toda a região por servir o melhor açaí, uma verdadeira delícia que não pode ser perdida. Venha provar esta maravilha que é um verdadeiro deleite para o paladar.",
+          "preco_original": 19.99,
+          "preco_venda": 18.99,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202203222322_AO52_i.jpg",
+          "imagem_local": "imagens\\A_a__ou_sorvete_400_ml_2.jpg"
+        },
+        {
+          "nome": "Açaí ou sorvete 500 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso açaí ou sorvete. Oferecemos tanto o autêntico açaí artesanal quanto o açaí industrializado de alta qualidade. Somos renomados em toda a região por servir o melhor açaí, uma verdadeira delícia que não pode ser perdida. Venha provar esta maravilha que é um verdadeiro deleite para o paladar.",
+          "preco_original": 22.99,
+          "preco_venda": 20.99,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202203222309_2L63_i.jpg",
+          "imagem_local": "imagens\\A_a__ou_sorvete_500_ml_3.jpg"
+        },
+        {
+          "nome": "Açaí ou sorvete 770 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso açaí ou sorvete. Oferecemos tanto o autêntico açaí artesanal quanto o açaí industrializado de alta qualidade. Somos renomados em toda a região por servir o melhor açaí, uma verdadeira delícia que não pode ser perdida. Venha provar esta maravilha que é um verdadeiro deleite para o paladar.",
+          "preco_original": 27.99,
+          "preco_venda": 26.99,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202203222310_H1VU_i.jpg",
+          "imagem_local": "imagens\\A_a__ou_sorvete_770_ml_4.jpg"
+        },
+        {
+          "nome": "Açaí ou sorvete 1 litro",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso açaí ou sorvete. Oferecemos tanto o autêntico açaí artesanal quanto o açaí industrializado de alta qualidade. Somos renomados em toda a região por servir o melhor açaí, uma verdadeira delícia que não pode ser perdida. Venha provar esta maravilha que é um verdadeiro deleite para o paladar.",
+          "preco_original": 36.99,
+          "preco_venda": 34.99,
+          "serve": "Serve 2 pessoas",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202203222320_PK2P_i.jpg",
+          "imagem_local": "imagens\\A_a__ou_sorvete_1_litro_5.jpg"
+        },
+        {
+          "nome": "2 litros de açaí ou sorvete.",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso açaí ou sorvete. Oferecemos tanto o autêntico açaí artesanal quanto o açaí industrializado de alta qualidade. Somos renomados em toda a região por servir o melhor açaí, uma verdadeira delícia que não pode ser perdida. Venha provar esta maravilha que é um verdadeiro deleite para o paladar.",
+          "preco_original": 69.99,
+          "preco_venda": 64.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202203222320_OYL2_i.jpg",
+          "imagem_local": "imagens\\2_litros_de_a_a__ou_sorvete__6.jpg"
+        },
+        {
+          "nome": "Barca de açaí ou sorvete",
+          "descricao": "Irresistível e tentadora, esta Barca de Açaí ou Sorvete é uma delícia à parte! Composta por aproximadamente 1 litro de açaí cremoso e saboroso ou sorvete de qualidade superior, a barca é adornada com complementos deliciosos que realçam ainda mais os sabores. Além disso, oferecemos toppings gratuitos para incrementar a sua experiência gastronômica. Todos os acompanhamentos são cuidadosamente dispostos dentro da barca, criando uma apresentação visual incrível e apetitosa. Uma indulgência que você merece!",
+          "preco_original": 45.99,
+          "preco_venda": 41.99,
+          "serve": "Serve 3 pessoas",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202203222315_3HYK_i.jpg",
+          "imagem_local": "imagens\\Barca_de_a_a__ou_sorvete_7.jpg"
+        },
+        {
+          "nome": "Açaí Titanic !!",
+          "descricao": "Apresentamos o 'Titanic !!', uma irresistível e colossal barca de açaí ou sorvete, meticulosamente preparada para satisfazer os paladares mais exigentes. Este prato de proporções épicas é adornado com uma variedade de complementos deliciosos e frutas frescas, habilmente dispostos para realçar os sabores vibrantes. Tudo isso em um tamanho sem igual, capaz de acomodar mais acompanhamentos que qualquer outro. A bordo desta embarcação gastronômica, todos os acompanhamentos são cuidadosamente arranjados, promovendo uma experiência de sabor verdadeiramente inesquecível. Embarque nesta jornada de delícias!",
+          "preco_original": 62.99,
+          "preco_venda": 59.99,
+          "serve": "Serve 4 pessoas",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202203222316_2S5F_i.jpg",
+          "imagem_local": "imagens\\Titanic____8.jpg"
+        },
+        {
+          "nome": "Açaí ou sorvete 5 litros",
+          "descricao": "Delicie-se com nossa caixa de 5 litros de açaí, oferecida a um preço irresistível. Em nossa promoção especial, você ganha 1 litro adicional gratuitamente, uma generosidade que só aumenta o sabor do negócio. Todos os acompanhamentos, criteriosamente selecionados para complementar a riqueza do açaí, são enviados separadamente em embalagens seguras, mantendo sua frescura e integridade intactas. As exceções são as caldas, já inclusas no açaí, adicionando uma doçura equilibrada e intensificando a experiência gustativa. Aproveite esta oferta tentadora!",
+          "preco_original": 174.95,
+          "preco_venda": 139.96,
+          "serve": "Serve 4 pessoas",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202007132011_3aUM_i.png",
+          "imagem_local": "imagens\\A_a__ou_sorvete_5_litros_9.jpg"
+        }
+      ]
+    },
+    {
+      "nome": "Super Combos",
+      "itens": [
+        {
+          "nome": "1 Salgado + 1 açaí de 400ml",
+          "descricao": "Delicie-se com um dos nossos irresistíveis salgados, cuidadosamente preparados para encantar o seu paladar. Depois, permita-se criar o seu próprio açaí ou sorvete, selecionando a partir de uma variedade de deliciosas e frescas opções que temos a oferecer. E o melhor de tudo? Você pode desfrutar dessas maravilhas gastronômicas a um preço absolutamente acessível. Este é o nosso 'Super Combo': uma combinação perfeita de sabor e valor.",
+          "preco_original": 25.0,
+          "preco_venda": 24.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407290927_R72D_i.jpg",
+          "imagem_local": "imagens\\1_Salgado___1_a_a__de_400ml_1.jpg"
+        },
+        {
+          "nome": "X-tudo Supreme + Açaí 400ml",
+          "descricao": "Potência total para sua fome e energia para o seu Dia! Um X Tudo com hambúrguer suculento, bacon crocante, ovo no ponto, queijo derretido, batata palha e molho especial, acompanhado de um super açaí de 400ml para fechar essa experiência fantástica com chave de ouro. Sabor que satisfaz o paladar e recarrega suas forças!",
+          "preco_original": null,
+          "preco_venda": 31.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202504282353_001H_i.jpg",
+          "imagem_local": "imagens\\X_tudo_Supreme___A_a__400ml_2.jpg"
+        },
+        {
+          "nome": "2 Salgados + Açaí de 1,1 Litro",
+          "descricao": "Um combo ideal para dividir com aquela pessoa especial, são 2 deliciosos salgados fresquinhos e um super açaí ou sorvete de 1,1 Litro!! Aproveite.",
+          "preco_original": 52.0,
+          "preco_venda": 47.99,
+          "serve": "Serve 2 pessoas",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407290944_PTG7_i.jpg",
+          "imagem_local": "imagens\\2_Salgados___A_a__de_1_1_Litro_3.jpg"
+        },
+        {
+          "nome": "1 Salgado + 1 Guaravita",
+          "descricao": "Escolha um dos nossos deliciosos salgados, e para acompanhar 1 refrescante Guaravita.",
+          "preco_original": 14.99,
+          "preco_venda": 13.99,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407292321_ON20_i.jpg",
+          "imagem_local": "imagens\\1_Salgado___1_Guaran__natural_4.jpg"
+        },
+        {
+          "nome": "1 Salgado + 1 Refrigerante lata",
+          "descricao": "Escolha 1 saboroso salgado e 1 refrigerante super gelado e refrescante.",
+          "preco_original": 17.99,
+          "preco_venda": 16.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407292337_KO3R_i.jpg",
+          "imagem_local": "imagens\\1_Salgado___1_Refrigerante_lata_5.jpg"
+        }
+      ]
+    },
+    {
+      "nome": "Salgados",
+      "itens": [
+        {
+          "nome": "Italiano de Queijo e Presunto.",
+          "descricao": "Delicioso italiano de queijo e presunto, com a massa levinha e super recheado, sempre fresquinho e chega quentinho na sua casa, aproveite!",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407280907_WW5M_i.jpg",
+          "imagem_local": "imagens\\Italiano_de_Queijo_e_Presunto__1.jpg"
+        },
+        {
+          "nome": "Italiano com cebola",
+          "descricao": "Delicioso italiano de queijo e presunto e cebola, com a massa levinha e super recheado, sempre fresquinho e chega quentinho na sua casa, aproveite!",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407280932_6U8O_i.jpg",
+          "imagem_local": "imagens\\Italiano_com_cebola_2.jpg"
+        },
+        {
+          "nome": "Italiano 4 queijos",
+          "descricao": "Massa macia e dourada recheada com a mistura cremosa de mussarela, provolone, parmesão e Catupiry.",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202509081937_53NB_i.jpg",
+          "imagem_local": "imagens\\Italiano_4_queijos_3.jpg"
+        },
+        {
+          "nome": "Italiano de Frango com Catupiry",
+          "descricao": "Delicioso italiano de frango com Catupiry, com a massa levinha e super recheado, sempre fresquinho e chega quentinho na sua casa, aproveite!",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407280940_10E2_i.jpg",
+          "imagem_local": "imagens\\Italiano_de_Frango_com_Catupiry_4.jpg"
+        },
+        {
+          "nome": "Italiano de calabresa com cheddar",
+          "descricao": "Delicioso italiano de calabresa com cheddar, com a massa levinha e super recheado, sempre fresquinho e chega quentinho na sua casa, aproveite!",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407280943_Y5NG_i.jpg",
+          "imagem_local": "imagens\\Italiano_de_calabresa_com_cheddar_5.jpg"
+        },
+        {
+          "nome": "Hamburguer de Queijo e Presunto",
+          "descricao": "Delicioso hamburguer de forno com queijo e presunto, com a massa levinha e super recheado, sempre fresquinho e chega quentinho na sua casa, aproveite!",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407280950_E231_i.jpg",
+          "imagem_local": "imagens\\Hamburguer_de_Queijo_e_Presunto_6.jpg"
+        },
+        {
+          "nome": "Hamburguer com cheddar",
+          "descricao": "Delicioso hamburguer de forno com cheddar, com a massa levinha e super recheado, sempre fresquinho e chega quentinho na sua casa, aproveite!",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407280953_855T_i.jpg",
+          "imagem_local": "imagens\\Hamburguer_com_cheddar_7.jpg"
+        },
+        {
+          "nome": "Hamburguer de calabresa com cheddar",
+          "descricao": "Hamburguer de forno de calabresa com cheddar",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202411131107_0V3Y_i.jpg",
+          "imagem_local": "imagens\\Hamburguer_de_calabresa_com_cheddar_8.jpg"
+        },
+        {
+          "nome": "Hamburguer de bacon com queijo",
+          "descricao": "Delicioso hamburguer de forno com bacon e queijo derretido.",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202411131111_ILOH_i.jpg",
+          "imagem_local": "imagens\\Hamburguer_de_bacon_com_queijo_9.jpg"
+        },
+        {
+          "nome": "Pastel de forno de Frango",
+          "descricao": "Massa leve e dourada, recheada com frango desfiado temperado e cremoso.",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407281004_5UT8_i.jpg",
+          "imagem_local": "imagens\\Pastel_de_forno_de_Frango_10.jpg"
+        },
+        {
+          "nome": "Esfiha de carne",
+          "descricao": "Deliciosa esfiha de carne com a massa levinha e super recheado, sempre fresquinho e chega quentinho na sua casa, aproveite!",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202504070021_V75T_i.jpg",
+          "imagem_local": "imagens\\Esfiha_de_carne_11.jpg"
+        },
+        {
+          "nome": "Croissant de chocolate",
+          "descricao": "Delicioso croissant de chocolate, com a massa levinha e super recheado, sempre fresquinho e chega quentinho na sua casa, aproveite!",
+          "preco_original": null,
+          "preco_venda": 12.49,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202407281008_XF78_i.jpg",
+          "imagem_local": "imagens\\Croissant_de_chocolate_12.jpg"
+        },
+        {
+          "nome": "Coxinha de Frango",
+          "descricao": "Frango bem temperado, massa leve e crocância de respeito.",
+          "preco_original": null,
+          "preco_venda": 13.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202507240039_ID7E_i.jpg",
+          "imagem_local": "imagens\\Coxinha_de_Frango_13.jpg"
+        },
+        {
+          "nome": "Coxinha com Catupiry",
+          "descricao": "Coxinha com Catupiry frita na hora, super crocante e quentinha!",
+          "preco_original": null,
+          "preco_venda": 13.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202507240042_MG8L_i.jpg",
+          "imagem_local": "imagens\\Coxinha_com_Catupiry_14.jpg"
+        },
+        {
+          "nome": "Risole de carne",
+          "descricao": "Massa crocante por fora e macia por dentro, recheada com carne moída bem temperada.",
+          "preco_original": null,
+          "preco_venda": 13.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202509081942_FE3X_i.jpg",
+          "imagem_local": "imagens\\Risole_de_carne_15.jpg"
+        },
+        {
+          "nome": "Enroladinho de salsicha",
+          "descricao": "Delicioso enroladinho de salsicha, crocante e super saboroso, frito na hora!",
+          "preco_original": null,
+          "preco_venda": 13.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202507240046_S353_i.jpg",
+          "imagem_local": "imagens\\Enroladinho_de_salsicha_16.jpg"
+        },
+        {
+          "nome": "Enroladinho de queijo e presunto",
+          "descricao": "Enroladinho de queijo e presunto, super crocante e saboroso, frito na hora!",
+          "preco_original": null,
+          "preco_venda": 13.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202507240051_8KCM_i.jpg",
+          "imagem_local": "imagens\\Enroladinho_de_queijo_e_presunto_17.jpg"
+        },
+        {
+          "nome": "Kibe",
+          "descricao": "Kibe bem temperadinho, frito na hora e com sabor irresistível!",
+          "preco_original": null,
+          "preco_venda": 13.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202507240055_EAV6_i.jpg",
+          "imagem_local": "imagens\\Kibe_18.jpg"
+        },
+        {
+          "nome": "Bolinho de aipim com carne moída",
+          "descricao": "Bolinho de aipim frito na hora, super temperado, crocante por fora e macio por dentro.",
+          "preco_original": null,
+          "preco_venda": 13.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202507240058_R56S_i.jpg",
+          "imagem_local": "imagens\\Bolinho_de_aipim_com_carne_mo_da_19.jpg"
+        }
+      ]
+    },
+    {
+      "nome": "Hamburguers",
+      "itens": [
+        {
+          "nome": "O Clássico",
+          "descricao": "Pão, 1 carne, queijo, batata palha e molho especial da casa.\n Simples, direto e cheio de sabor. Aquele lanche que não precisa exagerar pra ser incrível.",
+          "preco_original": null,
+          "preco_venda": 14.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202504270033_EC38_i.jpg",
+          "imagem_local": "imagens\\O_Cl_ssico_1.jpg"
+        },
+        {
+          "nome": "X-Baconzada",
+          "descricao": "Pão, carne, queijo, bacon crocante, batata palha e molho especial.\n\nO queridinho da quebrada. Queijo derretido, bacon de respeito e muito sabor em cada mordida.",
+          "preco_original": null,
+          "preco_venda": 17.49,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202504270034_616M_i.jpg",
+          "imagem_local": "imagens\\X_Baconzada_2.jpg"
+        },
+        {
+          "nome": "Big X-egg",
+          "descricao": "Pão, carne, queijo, ovo, batata palha e molho especial.\nO verdadeiro gigante dos clássicos: pão macio com gergelim, hambúrguer suculento, ovo frito no ponto perfeito, queijo derretendo, batata palha crocante pra dar aquele toque especial e o nosso molho exclusivo que amarra tudo no sabor. Um lanche completo, crocante e cheio de personalidade!",
+          "preco_original": null,
+          "preco_venda": 17.49,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202504270033_1027_i.jpg",
+          "imagem_local": "imagens\\Big_X_egg_3.jpg"
+        },
+        {
+          "nome": "X-tudo Supreme",
+          "descricao": "Pão, carne, queijo, bacon crocante, ovo, batata palha e molho especial.\nAqui o papo é reto: pão com gergilim, carne suculenta, ovo estalado, bacon crocante, queijo derretendo, batata palha crocante e nosso molho especial feito na casa. É pesado, é saboroso e é pra quem respeita um lanche de verdade.",
+          "preco_original": null,
+          "preco_venda": 18.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202504270034_8SX6_i.jpg",
+          "imagem_local": "imagens\\X_tudo_Supreme_4.jpg"
+        },
+        {
+          "nome": "X-Supreme Duplo",
+          "descricao": "Pão,  2 carnes, 2 fatias de queijo, bacon crocante, 2 ovos, batata palha e molho especial.\nDois andares de respeito! Hambúrguer duplo , ovos fritos no ponto, bacon crocante, queijo derretendo, batata palha e o nosso molho especial que segura essa bagunça deliciosa. Aqui é lanche pra quem tem fome de verdade e coragem pra encarar!",
+          "preco_original": null,
+          "preco_venda": 24.99,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202504270044_F4MV_i.jpg",
+          "imagem_local": "imagens\\X_Supreme_Duplo_5.jpg"
+        }
+      ]
+    },
+    {
+      "nome": "Bebidas",
+      "itens": [
+        {
+          "nome": "Coca-Cola Original 350ml",
+          "descricao": "Lata 350ml",
+          "preco_original": null,
+          "preco_venda": 7.5,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/820af392-002c-47b1-bfae-d7ef31743c7f/202210180733_pkydqdqvxf8.jpg",
+          "imagem_local": "imagens\\Coca_Cola_Original_350ml_1.jpg"
+        },
+        {
+          "nome": "Fanta Uva 350ml",
+          "descricao": "Lata 350ml",
+          "preco_original": null,
+          "preco_venda": 7.5,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/820af392-002c-47b1-bfae-d7ef31743c7f/202210180202_t0y669etrjs.jpg",
+          "imagem_local": "imagens\\Fanta_Uva_350ml_2.jpg"
+        },
+        {
+          "nome": "Guaravita",
+          "descricao": "290ml",
+          "preco_original": null,
+          "preco_venda": 4.0,
+          "serve": "Serve 1 pessoa",
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202103210158_wK5i_s.jpg",
+          "imagem_local": "imagens\\Guaravita_3.jpg"
+        },
+        {
+          "nome": "Refrigerante Guarana Antarctica 355ml",
+          "descricao": "Embalagem 350ml",
+          "preco_original": null,
+          "preco_venda": 7.5,
+          "serve": null,
+          "tags": [],
+          "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/820af392-002c-47b1-bfae-d7ef31743c7f/202210181754_3akgbd3d515.jpg",
+          "imagem_local": "imagens\\Refrigerante_Guarana_Antarctica_355ml_4.jpg"
+        }
+      ]
+    }
+  ]
+}

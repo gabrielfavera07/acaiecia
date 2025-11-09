@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Complementos - Painel Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .editor-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .editor-header h1 {
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 12px 20px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary);
+            background: rgba(var(--primary-rgb), 0.1);
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            color: var(--text-primary);
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .item-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: var(--background);
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .item-row:hover {
+            border-color: var(--primary);
+            box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.2);
+        }
+
+        .item-handle {
+            cursor: move;
+            color: var(--text-secondary);
+            font-size: 1.2em;
+        }
+
+        .item-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .item-price {
+            width: 120px;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-icon {
+            padding: 8px 12px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--text-secondary);
+        }
+
+        .btn-icon:hover {
+            background: var(--danger);
+            color: white;
+            border-color: var(--danger);
+        }
+
+        .btn-add-item {
+            padding: 12px 20px;
+            background: var(--success);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-add-item:hover {
+            background: var(--success-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(var(--success-rgb), 0.3);
+        }
+
+        .simple-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .simple-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            background: var(--background);
+            border-radius: 8px;
+            border: 2px solid var(--border);
+        }
+
+        .simple-item input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+        .alert {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .alert-info {
+            background: rgba(var(--info-rgb), 0.1);
+            border: 1px solid var(--info);
+            color: var(--info);
+        }
+
+        .alert-warning {
+            background: rgba(var(--warning-rgb), 0.1);
+            border: 1px solid var(--warning);
+            color: var(--warning);
+        }
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <div class="editor-header">
+            <div>
+                <h1><i class="fas fa-sliders-h"></i> Editor de Complementos</h1>
+                <p style="color: var(--text-secondary); margin-top: 5px;">
+                    Gerencie todos os complementos, adicionais e opções dos modais
+                </p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-secondary" onclick="window.location.href='dashboard.html'">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </button>
+                <button class="btn-primary" id="save-btn" onclick="saveComplementos()">
+                    <i class="fas fa-save"></i> Salvar Alterações
+                </button>
+            </div>
+        </div>
+
+        <div class="alert alert-info">
+            <i class="fas fa-info-circle"></i>
+            <div>
+                <strong>Como usar:</strong> Edite os nomes e preços dos complementos. 
+                Arraste os itens para reordenar. Clique em "Salvar Alterações" e depois "Publicar no Netlify" no painel principal.
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('sabores')">
+                <i class="fas fa-ice-cream"></i> Sabores Açaí/Sorvete
+            </button>
+            <button class="tab-btn" onclick="switchTab('acompanhamentos')">
+                <i class="fas fa-cookie"></i> Acompanhamentos
+            </button>
+            <button class="tab-btn" onclick="switchTab('adicionais')">
+                <i class="fas fa-plus-circle"></i> Adicionais
+            </button>
+            <button class="tab-btn" onclick="switchTab('salgados')">
+                <i class="fas fa-hamburger"></i> Salgados
+            </button>
+            <button class="tab-btn" onclick="switchTab('molhos')">
+                <i class="fas fa-bottle-droplet"></i> Molhos
+            </button>
+            <button class="tab-btn" onclick="switchTab('refrigerantes')">
+                <i class="fas fa-wine-bottle"></i> Refrigerantes
+            </button>
+            <button class="tab-btn" onclick="switchTab('bebidas')">
+                <i class="fas fa-glass-water"></i> Bebidas
+            </button>
+        </div>
+
+        <!-- Sabores -->
+        <div id="tab-sabores" class="tab-content active">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Sabores de Açaí e Sorvete</h2>
+                    <button class="btn-add-item" onclick="addSimpleItem('saboresAcai')">
+                        <i class="fas fa-plus"></i> Adicionar Sabor
+                    </button>
+                </div>
+                <div id="list-saboresAcai" class="simple-list"></div>
+            </div>
+        </div>
+
+        <!-- Acompanhamentos -->
+        <div id="tab-acompanhamentos" class="tab-content">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Acompanhamentos</h2>
+                    <button class="btn-add-item" onclick="addPricedItem('acompanhamentos')">
+                        <i class="fas fa-plus"></i> Adicionar Acompanhamento
+                    </button>
+                </div>
+                <div id="list-acompanhamentos" class="items-list"></div>
+            </div>
+        </div>
+
+        <!-- Adicionais -->
+        <div id="tab-adicionais" class="tab-content">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Adicionais</h2>
+                    <button class="btn-add-item" onclick="addPricedItem('adicionais')">
+                        <i class="fas fa-plus"></i> Adicionar Adicional
+                    </button>
+                </div>
+                <div id="list-adicionais" class="items-list"></div>
+            </div>
+        </div>
+
+        <!-- Salgados -->
+        <div id="tab-salgados" class="tab-content">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Salgados</h2>
+                    <button class="btn-add-item" onclick="addPricedItem('salgados')">
+                        <i class="fas fa-plus"></i> Adicionar Salgado
+                    </button>
+                </div>
+                <div id="list-salgados" class="items-list"></div>
+            </div>
+        </div>
+
+        <!-- Molhos -->
+        <div id="tab-molhos" class="tab-content">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Molhos</h2>
+                    <button class="btn-add-item" onclick="addSimpleItem('molhos')">
+                        <i class="fas fa-plus"></i> Adicionar Molho
+                    </button>
+                </div>
+                <div id="list-molhos" class="simple-list"></div>
+            </div>
+        </div>
+
+        <!-- Refrigerantes -->
+        <div id="tab-refrigerantes" class="tab-content">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Refrigerantes</h2>
+                    <button class="btn-add-item" onclick="addSimpleItem('refrigerantes')">
+                        <i class="fas fa-plus"></i> Adicionar Refrigerante
+                    </button>
+                </div>
+                <div id="list-refrigerantes" class="simple-list"></div>
+            </div>
+        </div>
+
+        <!-- Bebidas -->
+        <div id="tab-bebidas" class="tab-content">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Bebidas / Turbinadas</h2>
+                    <button class="btn-add-item" onclick="addBebidasItem()">
+                        <i class="fas fa-plus"></i> Adicionar Bebida
+                    </button>
+                </div>
+                <div id="list-bebidas" class="items-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="complementos-editor.js"></script>
+</body>
+</html>
