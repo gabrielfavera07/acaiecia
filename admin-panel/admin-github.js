@@ -8,11 +8,8 @@ let productsData = null;
 let originalData = null;
 let hasChanges = false;
 
-// ===== CREDENCIAIS GITHUB (HARDCODED) =====
-const GITHUB_OWNER = 'gabrielfavera07';
-const GITHUB_REPO = 'acaiecia';
-const GITHUB_TOKEN = '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';
-const PRODUCTS_FILE_PATH = 'products_with_prices.json';
+// ===== CONFIGURAÇÕES =====
+const NETLIFY_FUNCTION_URL = '/.netlify/functions/update-products';
 
 // ===== URL DO PRODUCTS JSON =====
 const PRODUCTS_JSON_URL = 'https://acaiecia.netlify.app/products_with_prices.json';
@@ -274,11 +271,9 @@ saveSettingsBtn.addEventListener('click', () => {
     }
 });
 
-// ===== PUBLICAR NO GITHUB =====
+// ===== PUBLICAR NO GITHUB (VIA NETLIFY FUNCTION) =====
 publishBtn.addEventListener('click', async () => {
-    console.log('🚀 Iniciando publicação via GitHub...');
-    console.log('Repositório:', `${GITHUB_OWNER}/${GITHUB_REPO}`);
-    console.log('Token:', GITHUB_TOKEN ? 'Configurado ✓' : 'ERRO: Token não encontrado!');
+    console.log('🚀 Iniciando publicação via Netlify Function...');
     
     if (!confirm('Deseja publicar as alterações? Esta ação fará commit no GitHub e o Netlify atualizará automaticamente em segundos.')) {
         return;
@@ -288,72 +283,30 @@ publishBtn.addEventListener('click', async () => {
         publishBtn.disabled = true;
         publishBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
         
-        const jsonContent = JSON.stringify(productsData, null, 2);
+        console.log('📦 Enviando dados para a function...');
+        console.log('Tamanho do JSON:', JSON.stringify(productsData).length, 'caracteres');
         
-        console.log('📦 Preparando commit...');
-        console.log('Tamanho do JSON:', jsonContent.length, 'caracteres');
-        
-        // Passo 1: Obter o SHA atual do arquivo
-        const getFileUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${PRODUCTS_FILE_PATH}`;
-        console.log('📡 Obtendo arquivo atual:', getFileUrl);
-        
-        const getResponse = await fetch(getFileUrl, {
+        // Chamar a Netlify Function
+        const response = await fetch(NETLIFY_FUNCTION_URL, {
+            method: 'POST',
             headers: {
-                'Authorization': `Bearer ${GITHUB_TOKEN}`,
-                'Accept': 'application/vnd.github.v3+json'
-            }
-        });
-        
-        let fileSha = null;
-        if (getResponse.ok) {
-            const fileData = await getResponse.json();
-            fileSha = fileData.sha;
-            console.log('📄 SHA do arquivo atual:', fileSha);
-        } else {
-            console.log('📄 Arquivo não existe, será criado');
-        }
-        
-        // Passo 2: Fazer commit do arquivo atualizado
-        publishBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Fazendo commit...';
-        
-        const commitData = {
-            message: `Atualização de preços - ${new Date().toLocaleString('pt-BR')}`,
-            content: btoa(unescape(encodeURIComponent(jsonContent))),
-            branch: 'main'
-        };
-        
-        if (fileSha) {
-            commitData.sha = fileSha;
-        }
-        
-        console.log('💾 Fazendo commit...');
-        const commitResponse = await fetch(getFileUrl, {
-            method: 'PUT',
-            headers: {
-                'Authorization': `Bearer ${GITHUB_TOKEN}`,
-                'Accept': 'application/vnd.github.v3+json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(commitData)
+            body: JSON.stringify({
+                products: productsData
+            })
         });
         
-        console.log('📨 Response status:', commitResponse.status);
+        console.log('📨 Response status:', response.status);
         
-        if (!commitResponse.ok) {
-            const errorText = await commitResponse.text();
-            console.error('❌ Erro na resposta:', errorText);
-            let errorMessage = 'Erro ao fazer commit no GitHub';
-            try {
-                const error = JSON.parse(errorText);
-                errorMessage = error.message || errorMessage;
-            } catch (e) {
-                errorMessage = errorText || errorMessage;
-            }
-            throw new Error(errorMessage);
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('❌ Erro na resposta:', errorData);
+            throw new Error(errorData.error || 'Erro ao publicar');
         }
         
-        const commitResult = await commitResponse.json();
-        console.log('✅ Commit realizado:', commitResult);
+        const result = await response.json();
+        console.log('✅ Resposta da function:', result);
         
         publishBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ⏳ Aguardando Netlify...';
         
