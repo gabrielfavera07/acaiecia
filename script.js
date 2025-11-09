@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Fetch and Render Products ---
     function fetchProducts() {
-        fetch('products_with_prices.json')
+        // Adicionar timestamp para evitar cache e sempre carregar a versão mais recente
+        const cacheBuster = new Date().getTime();
+        fetch(`products_with_prices.json?v=${cacheBuster}`)
             .then(response => response.json())
             .then(data => {
                 restaurantData = data.restaurante;
@@ -725,7 +727,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modify fetchProducts to also populate sticky menu
     function fetchProducts() {
-        fetch('products_with_prices.json')
+        // Adicionar timestamp para evitar cache e sempre carregar a versão mais recente
+        const cacheBuster = new Date().getTime();
+        fetch(`products_with_prices.json?v=${cacheBuster}`)
             .then(response => response.json())
             .then(data => {
                 restaurantData = data.restaurante;
