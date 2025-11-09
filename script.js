@@ -440,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let formatted = '';
         
         if (customizations.talher) {
-            formatted += `   •${customizations.talher === 'sim' ? 'Sim' : 'Não'}\n`;
+            formatted += `   • ${customizations.talher === 'sim' ? 'Sim' : 'Não'}\n`;
         }
         
         if (customizations.saborAcai) {
@@ -449,46 +449,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? customizations.saborAcai 
                 : customizations.saborAcai.split(',');
             sabores.forEach(sabor => {
-                formatted += `•${sabor.trim()}\\n`;
+                formatted += `• ${sabor.trim()}\n`;
             });
         }
         
         if (customizations.separacao) {
-            formatted += `•${customizations.separacao === 'separado' ? 'Separado (+R$ 4,00)' : 'Dentro do copo'}\n`;
+            formatted += `• ${customizations.separacao === 'separado' ? 'Separado (+R$ 4,00)' : 'Dentro do copo'}\n`;
         }
         
         if (customizations.acompanhamentos && customizations.acompanhamentos.length > 0) {
             customizations.acompanhamentos.forEach(item => {
-                formatted += `• ${item}\n`;
+                formatted += `   • ${item}\n`;
             });
         }
         
         if (customizations.adicionais && customizations.adicionais.length > 0) {
             customizations.adicionais.forEach(item => {
-                formatted += `• ${item}\n`;
+                formatted += `   • ${item}\n`;
             });
         }
         
         if (customizations.salgados && customizations.salgados.length > 0) {
             customizations.salgados.forEach(item => {
-                formatted += `• ${item}\n`;
+                formatted += `   • ${item}\n`;
             });
         }
         
         if (customizations.molhos && customizations.molhos.length > 0) {
             customizations.molhos.forEach(item => {
-                formatted += `•${item}\n`;
+                formatted += `   • ${item}\n`;
             });
         }
         
         if (customizations.bebidas && customizations.bebidas.length > 0) {
             customizations.bebidas.forEach(item => {
-                formatted += `•${item}\n`;
+                formatted += `   • ${item}\n`;
             });
         }
         
         if (customizations.refrigerante) {
-            formatted += `• ${customizations.refrigerante}\n`;
+            formatted += `   • ${customizations.refrigerante}\n`;
         }
         
         return formatted;
