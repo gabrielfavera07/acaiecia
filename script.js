@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para enviar pedido para WhatsApp
     function sendToWhatsApp(address, paymentData) {
-        let message = `🛒 Pedido - AÇAI E CIA\n\n`;
+        let message = `*🛒 Pedido - AÇAI E CIA*\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         
         // Adicionar link do Google Maps se houver coordenadas
@@ -506,27 +506,27 @@ document.addEventListener('DOMContentLoaded', () => {
             message += `━━━━━━━━━━━━━━━━━━━━\n`;
         }
         
-        message += `Itens do pedido\n \n`;
+        message += `*Itens do pedido*\n \n`;
         
         // Adicionar itens do pedido
         cart.forEach((item, index) => {
-            message += `${item.quantity}x UNIDADE(S) DE:\n${item.name} \n`;
+            message += `*${item.quantity}x UNIDADE(S) DE:*\n${item.name} \n`;
             
             if (item.customizations) {
                 message += formatCustomizations(item.customizations);
             }
             
-            message += `   \nSubtotal: R$ ${(item.price * item.quantity).toFixed(2)}\n\n`;
+            message += `   \n*Subtotal: R$ ${(item.price * item.quantity).toFixed(2)}*\n\n`;
         });
         
         // Total
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
-        message += `💵 TOTAL: R$ ${total.toFixed(2)}+ Frete\n\n`;
+        message += `*💵 TOTAL: R$ ${total.toFixed(2)}+ Frete*\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
         
         // Endereço de entrega
-        message += `📍 Endereço de Entrega:\n`;
+        message += `📍 *Endereço de Entrega:*\n`;
         if (address.apelido) {
             message += `   ${address.apelido}\n`;
         }
@@ -545,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Forma de pagamento
         if (paymentData) {
-            message += `💰 Forma de Pagamento:\n`;
+            message += `💰 *Forma de Pagamento:*\n`;
             
             const paymentLabels = {
                 'credito': 'Cartão de Crédito 💳',
