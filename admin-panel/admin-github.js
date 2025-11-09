@@ -9,7 +9,7 @@ let originalData = null;
 let hasChanges = false;
 
 // ===== CONFIGURAÇÕES =====
-const NETLIFY_FUNCTION_URL = '/.netlify/functions/update-products';
+const NETLIFY_FUNCTION_URL = 'https://acaiecia.netlify.app/.netlify/functions/update-products';
 
 // ===== URL DO PRODUCTS JSON =====
 const PRODUCTS_JSON_URL = 'https://acaiecia.netlify.app/products_with_prices.json';
