@@ -5,7 +5,7 @@
     "descricao": "Vai ser o melhor momento do seu dia!🥰.Estamos entre os melhores restaurantes da região 🤩.Açaí 100% natural e artesanal❤️",
     "avaliacao": 4.7,
     "avaliacoes_total": 209,
-    "pedido_minimo": 10.0,
+    "pedido_minimo": 10,
     "endereco": "Rua Francisca Lopes de Souza 0, Engenho do Mato - NITEROI, RJ",
     "telefone": "+5521982547599"
   },
@@ -16,7 +16,7 @@
         {
           "nome": "Açaí ou sorvete 300 ml",
           "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso açaí ou sorvete. Oferecemos tanto o autêntico açaí artesanal quanto o açaí industrializado de alta qualidade. Somos renomados em toda a região por servir o melhor açaí, uma verdadeira delícia que não pode ser perdida. Venha provar esta maravilha que é um verdadeiro deleite para o paladar.",
-          "preco_original": 17.0,
+          "preco_original": 16,
           "preco_venda": 11.99,
           "serve": "Serve 1 pessoa",
           "tags": [],
@@ -109,7 +109,7 @@
         {
           "nome": "1 Salgado + 1 açaí de 400ml",
           "descricao": "Delicie-se com um dos nossos irresistíveis salgados, cuidadosamente preparados para encantar o seu paladar. Depois, permita-se criar o seu próprio açaí ou sorvete, selecionando a partir de uma variedade de deliciosas e frescas opções que temos a oferecer. E o melhor de tudo? Você pode desfrutar dessas maravilhas gastronômicas a um preço absolutamente acessível. Este é o nosso 'Super Combo': uma combinação perfeita de sabor e valor.",
-          "preco_original": 25.0,
+          "preco_original": 25,
           "preco_venda": 24.49,
           "serve": "Serve 1 pessoa",
           "tags": [],
@@ -131,7 +131,7 @@
         {
           "nome": "2 Salgados + Açaí de 1,1 Litro",
           "descricao": "Um combo ideal para dividir com aquela pessoa especial, são 2 deliciosos salgados fresquinhos e um super açaí ou sorvete de 1,1 Litro!! Aproveite.",
-          "preco_original": 52.0,
+          "preco_original": 52,
           "preco_venda": 47.99,
           "serve": "Serve 2 pessoas",
           "tags": [],
@@ -466,7 +466,7 @@
           "nome": "Guaravita",
           "descricao": "290ml",
           "preco_original": null,
-          "preco_venda": 4.0,
+          "preco_venda": 4,
           "serve": "Serve 1 pessoa",
           "tags": [],
           "imagem_url": "https://static.ifood-static.com.br/image/upload/t_low/pratos/d9300296-0db8-4a3b-93ec-a1e9c8cd0deb/202103210158_wK5i_s.jpg",
