@@ -1,4 +1,5 @@
 {
+  "push_subscriptions": [],
   "restaurante": {
     "id": "d9300296-0db8-4a3b-93ec-a1e9c8cd0deb",
     "nome": "Açaí & Cia",
@@ -7,7 +8,7 @@
     "avaliacoes_total": 209,
     "pedido_minimo": 10,
     "endereco": "Rua Francisca Lopes de Souza 0, Engenho do Mato - NITEROI, RJ",
-    "telefone": "+5521982547599"
+    "telefone": "+5521973145934"
   },
   "categorias": [
     {
