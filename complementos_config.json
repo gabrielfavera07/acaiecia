@@ -122,7 +122,7 @@
     "Fanta Uva 350ml"
   ],
   "bebidas": [
-    { "nome": "Não turbinar", "descricao": "Sem itens extras", "preco": 0 },
+    { "nome": "Não turbinar!", "descricao": "Sem itens extras", "preco": 0 },
     { "nome": "Batata Frita", "descricao": "A batata crocante e quentinha pra você montar o seu combo.", "preco": 7.99 },
     { "nome": "Coca-Cola Original 350ml", "descricao": "Lata 350ml", "preco": 6.99 },
     { "nome": "Fanta Uva 350ml", "descricao": "Lata 350ml", "preco": 6.99 },
