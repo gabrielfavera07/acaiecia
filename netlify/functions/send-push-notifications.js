@@ -41,15 +41,15 @@ exports.handler = async (event, context) => {
             };
         }
 
-        // Configurar VAPID keys
-        const vapidPublicKey = process.env.VAPID_PUBLIC_KEY;
-        const vapidPrivateKey = process.env.VAPID_PRIVATE_KEY;
+        // Configurar VAPID keys (novos nomes de variáveis)
+        const vapidPublicKey = process.env.PUSH_PUBLIC_KEY;
+        const vapidPrivateKey = process.env.PUSH_PRIVATE_KEY;
 
         if (!vapidPublicKey || !vapidPrivateKey) {
             return {
                 statusCode: 500,
                 headers,
-                body: JSON.stringify({ error: 'VAPID keys não configuradas' })
+                body: JSON.stringify({ error: 'Chaves PUSH não configuradas' })
             };
         }
 
