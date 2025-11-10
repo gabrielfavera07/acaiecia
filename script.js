@@ -17,17 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Fetch and Render Products ---
     function fetchProducts() {
-        // Consumir JSON diretamente do GitHub Raw (atualização em tempo real)
-        // Adicionar timestamp para evitar cache e sempre carregar a versão mais recente
+        // Usar GitHub API diretamente para evitar cache CDN
+        const apiUrl = 'https://api.github.com/repos/gabrielfavera07/acaiecia/contents/products_with_prices.json';
         const cacheBuster = new Date().getTime();
-        const jsonUrl = window.CONFIG ? window.CONFIG.jsonUrl : 'https://raw.githubusercontent.com/gabrielfavera07/acaiecia/main/products_with_prices.json';
         
-        fetch(`${jsonUrl}?v=${cacheBuster}`)
+        fetch(`${apiUrl}?ref=main&t=${cacheBuster}`, {
+            headers: {
+                'Accept': 'application/vnd.github.v3.raw' // Retorna JSON direto sem base64
+            }
+        })
             .then(response => response.json())
             .then(data => {
                 restaurantData = data.restaurante;
                 allCategories = data.categorias || [];
                 populateCategories();
+                populateStickyCategoryMenu(); // Popula o menu sticky
                 renderProducts(); // Render all products initially
             })
             .catch(error => console.error('Error loading products:', error));
@@ -507,6 +511,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function sendToWhatsApp(address, paymentData) {
         let message = `*🛒 Pedido - AÇAI E CIA*\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
+        
+        // Adicionar nome do destinatário
+        if (address.nomeDestinatario) {
+            message += `*Pedido por:* ${address.nomeDestinatario}\n`;
+            message += `━━━━━━━━━━━━━━━━━━━━\n`;
+        }
         
         // Adicionar link do Google Maps se houver coordenadas
         if (address.latitude && address.longitude) {
