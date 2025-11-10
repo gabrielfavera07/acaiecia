@@ -1078,16 +1078,19 @@ h1, h2, h3, h4 {
     right: 0;
     background: linear-gradient(135deg, #4A0E4E 0%, #6B1B6D 100%);
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
-    z-index: 1003;
+    z-index: 99999 !important;
     transform: translateY(100%);
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     padding: 0;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .pwa-install-banner.show {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    display: block !important;
 }
 
 .pwa-banner-content {
