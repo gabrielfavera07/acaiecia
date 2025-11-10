@@ -17,15 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Fetch and Render Products ---
     function fetchProducts() {
-        // Usar GitHub API diretamente para evitar cache CDN
-        const apiUrl = 'https://api.github.com/repos/gabrielfavera07/acaiecia/contents/products_with_prices.json';
+        // Buscar do arquivo JSON servido pelo Netlify
+        const apiUrl = '/products_with_prices.json';
         const cacheBuster = new Date().getTime();
-        
-        fetch(`${apiUrl}?ref=main&t=${cacheBuster}`, {
-            headers: {
-                'Accept': 'application/vnd.github.v3.raw' // Retorna JSON direto sem base64
-            }
-        })
+
+        fetch(`${apiUrl}?t=${cacheBuster}`)
             .then(response => response.json())
             .then(data => {
                 restaurantData = data.restaurante;
