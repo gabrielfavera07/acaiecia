@@ -1,56 +1,5 @@
 {
-  "push_subscriptions": [
-    {
-      "endpoint": "https://jmt17.google.com/fcm/send/e9oEZ8A1PDg:APA91bH-GieMIf6nvE3S_6xyjIxQacp-amkhXH4_5Qro76bm0FtPl4T8cxXqYanfNa2n0H0spI987xOstIF8UcYsVAJFUaVkCJLzYB30GFe2RTS3yW5YPEEmlBNafBPF_-Mb53WaQGSH",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BIDxRwLIGNcDYx5A5g0LpW0YYHOK6jVhBri4zGi6LeXu3INdx5HdVj9n4fznL+8CaG/24z9QprRLWkml3QGyF4c=",
-        "auth": "VfWI/YeeF8RC3nybNTlSpg=="
-      },
-      "timestamp": "2025-11-10T02:59:19.909Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
-    },
-    {
-      "endpoint": "https://jmt17.google.com/fcm/send/cCJ7-egUz_A:APA91bFRbGbqOf985OFCY_qOYJcBNfjEO_pPxJGpiSB3S3E4iEb5R0sDisK-Q_GY48Qmr6-3AKHarMR-IcNP1L2CXG4T7hWp6tybIRiDGWj8kRekKhaqcds4is__Ql_UbAzSa_B6g0XR",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BKOgwjkTeN66JZcOBlsEobs0GeRqaErIQoKSRb0P6laFMlM3lQhawzN79mw2E4BXjUZa4S9PI2rhN3HawUqN6lE=",
-        "auth": "zG8JOPkilXYGtE9xrAA3Cw=="
-      },
-      "timestamp": "2025-11-10T03:11:38.441Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
-    },
-    {
-      "endpoint": "https://jmt17.google.com/fcm/send/dZqagUCOTps:APA91bGcjirXRPrL8qRB_NdPqq7Dmqc80F2ii9tmvTDZDhIChcoHvBnKRmwzTpRY6iFuJ8Sac2YINtkSpfIR2W-NU0xTu_BjHrPcaszm8ZKAn8PhWDjkGomVFLtanLv6-7_f_hmeM_fl",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BLj/DaQX6j+U8KAWaRN5uuGUQ0SXOSeLYd+UMC7KJdLG96PuPGFvOccmZOJUdiOApCQGzdWCpBFWs9ZJv+6p+aw=",
-        "auth": "fK6TidQ2mKgx0NbjRVKsmw=="
-      },
-      "timestamp": "2025-11-10T03:11:39.423Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
-    },
-    {
-      "endpoint": "https://jmt17.google.com/fcm/send/fcsem1ApO9U:APA91bHxWfxW2lK48KLySWb6y1efu00KXIKdQDVJ5eIoDtUTBiEm0SvQeWYn0iAT2B6mmnUXrVvXWzbPBVVdqPCiW1pBr9cbuUnudOs3BSkcPmReQM1tzU0XplygLSJ3FOAz3-nwPlGY",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BFl1GB60EiFM0IQa4eQUpxwDpHUiTRhvnwWLu8N4VtZ7InT25sUgZwZrUjVGd07oBBqid43qfMD3ePgH5cyXHYo=",
-        "auth": "zujo5q6WhNivyLPgiRzWgw=="
-      },
-      "timestamp": "2025-11-10T03:12:17.174Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
-    },
-    {
-      "endpoint": "https://jmt17.google.com/fcm/send/dOpFxb7YFtQ:APA91bFnLRqRUJQVCnQ0lFuo2kZbfGw32Xq73Q2E_lyTs5UNQxHFdDrDN9yyCdG3HyA14N-_HhX5m03hJQlemCNpRvyR6rlMX3DXt3SOZoD6TAIMNZlBrQpQDNx3IGOdk3z88G50wrkW",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BKD3JwznsVbINSeLyTJO2b++XmbQtpM6bQe97JTSs4dpyavI3pdBDpOXlrTA3N4JFMBz5MbUPV8j9nay6NyOng8=",
-        "auth": "KsouYcT6nwKZUhnt1DjpPg=="
-      },
-      "timestamp": "2025-11-10T03:17:22.780Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
-    }
-  ],
+  "push_subscriptions": [],
   "restaurante": {
     "id": "d9300296-0db8-4a3b-93ec-a1e9c8cd0deb",
     "nome": "Açaí & Cia",
