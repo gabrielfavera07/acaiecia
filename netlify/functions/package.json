@@ -1,0 +1,15 @@
+{
+  "name": "acaiecia-netlify-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions para Açaí & Cia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["netlify", "functions", "push-notifications"],
+  "author": "Açaí & Cia",
+  "license": "MIT",
+  "dependencies": {
+    "web-push": "^3.6.7"
+  }
+}
