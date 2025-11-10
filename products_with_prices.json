@@ -29,12 +29,22 @@
       },
       "timestamp": "2025-11-09T23:54:35.092Z",
       "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"
+    },
+    {
+      "endpoint": "https://jmt17.google.com/fcm/send/cCYBudfwEOc:APA91bHhNpwqD1ApeEQoyXrUVcMm81MlEgzD5R2N8icUMmn7gbGhZVGxnAXpus-tKeyXDdET5wxQGDgnF9BHoW5_iMe_Knd3CQsmaZF13Pe6969qQAmz3Hm92e892YnB9Fq8olHaODiv",
+      "expirationTime": null,
+      "keys": {
+        "p256dh": "BKGx71vik3NkCNk1WR6cgwsgYFVgvr-yauPAq2Qz4J4vU31NTHPs8pQzuAErkGOwO6c_lP0RFUnEDenEBydJukI",
+        "auth": "iTIL6oTZY2EZSaF3pox2rA"
+      },
+      "timestamp": "2025-11-10T00:25:40.621Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
     }
   ],
   "restaurante": {
     "id": "d9300296-0db8-4a3b-93ec-a1e9c8cd0deb",
-    "nome": "AÃÂÃÂ§aÃÂÃÂ­ & Cia",
-    "descricao": "Vai ser o melhor momento do seu dia!ÃÂ°ÃÂÃÂ¥ÃÂ°.Estamos entre os melhores restaurantes da regiÃÂÃÂ£o ÃÂ°ÃÂÃÂ¤ÃÂ©.AÃÂÃÂ§aÃÂÃÂ­ 100% natural e artesanalÃÂ¢ÃÂÃÂ¤ÃÂ¯ÃÂ¸ÃÂ",
+    "nome": "AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ & Cia",
+    "descricao": "Vai ser o melhor momento do seu dia!ÃÂÃÂ°ÃÂÃÂÃÂÃÂ¥ÃÂÃÂ°.Estamos entre os melhores restaurantes da regiÃÂÃÂÃÂÃÂ£o ÃÂÃÂ°ÃÂÃÂÃÂÃÂ¤ÃÂÃÂ©.AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ 100% natural e artesanalÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¤ÃÂÃÂ¯ÃÂÃÂ¸ÃÂÃÂ",
     "avaliacao": 4.7,
     "avaliacoes_total": 209,
     "pedido_minimo": 10,
@@ -43,11 +53,11 @@
   },
   "categorias": [
     {
-      "nome": "AÃÂÃÂ§aÃÂÃÂ­ e sorvete",
+      "nome": "AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ e sorvete",
       "itens": [
         {
-          "nome": "AÃÂÃÂ§aÃÂÃÂ­ ou sorvete 300 ml",
-          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂ§aÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂªntico aÃÂÃÂ§aÃÂÃÂ­ artesanal quanto o aÃÂÃÂ§aÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂ£o por servir o melhor aÃÂÃÂ§aÃÂÃÂ­, uma verdadeira delÃÂÃÂ­cia que nÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂ© um verdadeiro deleite para o paladar.",
+          "nome": "AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete 300 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂÃÂÃÂªntico aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ artesanal quanto o aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂÃÂÃÂ£o por servir o melhor aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­, uma verdadeira delÃÂÃÂÃÂÃÂ­cia que nÃÂÃÂÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂÃÂÃÂ© um verdadeiro deleite para o paladar.",
           "preco_original": 16,
           "preco_venda": 11.99,
           "serve": "Serve 1 pessoa",
@@ -57,8 +67,8 @@
           "ativo": true
         },
         {
-          "nome": "AÃÂÃÂ§aÃÂÃÂ­ ou sorvete 400 ml",
-          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂ§aÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂªntico aÃÂÃÂ§aÃÂÃÂ­ artesanal quanto o aÃÂÃÂ§aÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂ£o por servir o melhor aÃÂÃÂ§aÃÂÃÂ­, uma verdadeira delÃÂÃÂ­cia que nÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂ© um verdadeiro deleite para o paladar.",
+          "nome": "AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete 400 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂÃÂÃÂªntico aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ artesanal quanto o aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂÃÂÃÂ£o por servir o melhor aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­, uma verdadeira delÃÂÃÂÃÂÃÂ­cia que nÃÂÃÂÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂÃÂÃÂ© um verdadeiro deleite para o paladar.",
           "preco_original": 19.99,
           "preco_venda": 14.99,
           "serve": "Serve 1 pessoa",
@@ -68,8 +78,8 @@
           "ativo": true
         },
         {
-          "nome": "AÃÂÃÂ§aÃÂÃÂ­ ou sorvete 500 ml",
-          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂ§aÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂªntico aÃÂÃÂ§aÃÂÃÂ­ artesanal quanto o aÃÂÃÂ§aÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂ£o por servir o melhor aÃÂÃÂ§aÃÂÃÂ­, uma verdadeira delÃÂÃÂ­cia que nÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂ© um verdadeiro deleite para o paladar.",
+          "nome": "AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete 500 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂÃÂÃÂªntico aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ artesanal quanto o aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂÃÂÃÂ£o por servir o melhor aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­, uma verdadeira delÃÂÃÂÃÂÃÂ­cia que nÃÂÃÂÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂÃÂÃÂ© um verdadeiro deleite para o paladar.",
           "preco_original": 22.99,
           "preco_venda": 16.99,
           "serve": "Serve 1 pessoa",
@@ -79,8 +89,8 @@
           "ativo": true
         },
         {
-          "nome": "AÃÂÃÂ§aÃÂÃÂ­ ou sorvete 700 ml",
-          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂ§aÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂªntico aÃÂÃÂ§aÃÂÃÂ­ artesanal quanto o aÃÂÃÂ§aÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂ£o por servir o melhor aÃÂÃÂ§aÃÂÃÂ­, uma verdadeira delÃÂÃÂ­cia que nÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂ© um verdadeiro deleite para o paladar.",
+          "nome": "AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete 700 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂÃÂÃÂªntico aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ artesanal quanto o aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂÃÂÃÂ£o por servir o melhor aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­, uma verdadeira delÃÂÃÂÃÂÃÂ­cia que nÃÂÃÂÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂÃÂÃÂ© um verdadeiro deleite para o paladar.",
           "preco_original": 27.99,
           "preco_venda": 21.99,
           "serve": "Serve 1 pessoa",
@@ -90,8 +100,8 @@
           "ativo": true
         },
         {
-          "nome": "AÃÂÃÂ§aÃÂÃÂ­ ou sorvete 1100 ml",
-          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂ§aÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂªntico aÃÂÃÂ§aÃÂÃÂ­ artesanal quanto o aÃÂÃÂ§aÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂ£o por servir o melhor aÃÂÃÂ§aÃÂÃÂ­, uma verdadeira delÃÂÃÂ­cia que nÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂ© um verdadeiro deleite para o paladar.",
+          "nome": "AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete 1100 ml",
+          "descricao": "Delicie-se com nosso excepcionalmente delicioso e ultra cremoso aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete. Oferecemos tanto o autÃÂÃÂÃÂÃÂªntico aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ artesanal quanto o aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ industrializado de alta qualidade. Somos renomados em toda a regiÃÂÃÂÃÂÃÂ£o por servir o melhor aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­, uma verdadeira delÃÂÃÂÃÂÃÂ­cia que nÃÂÃÂÃÂÃÂ£o pode ser perdida. Venha provar esta maravilha que ÃÂÃÂÃÂÃÂ© um verdadeiro deleite para o paladar.",
           "preco_original": 36.99,
           "preco_venda": 27.99,
           "serve": "Serve 2 pessoas",
@@ -101,8 +111,8 @@
           "ativo": true
         },
         {
-          "nome": "Barca de aÃÂÃÂ§aÃÂÃÂ­ ou sorvete",
-          "descricao": "IrresistÃÂÃÂ­vel e tentadora, esta Barca de AÃÂÃÂ§aÃÂÃÂ­ ou Sorvete ÃÂÃÂ© uma delÃÂÃÂ­cia ÃÂÃÂ  parte! Composta por aproximadamente 1 litro de aÃÂÃÂ§aÃÂÃÂ­ cremoso e saboroso ou sorvete de qualidade superior, a barca ÃÂÃÂ© adornada com complementos deliciosos que realÃÂÃÂ§am ainda mais os sabores. AlÃÂÃÂ©m disso, oferecemos toppings gratuitos para incrementar a sua experiÃÂÃÂªncia gastronÃÂÃÂ´mica. Todos os acompanhamentos sÃÂÃÂ£o cuidadosamente dispostos dentro da barca, criando uma apresentaÃÂÃÂ§ÃÂÃÂ£o visual incrÃÂÃÂ­vel e apetitosa. Uma indulgÃÂÃÂªncia que vocÃÂÃÂª merece!",
+          "nome": "Barca de aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete",
+          "descricao": "IrresistÃÂÃÂÃÂÃÂ­vel e tentadora, esta Barca de AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou Sorvete ÃÂÃÂÃÂÃÂ© uma delÃÂÃÂÃÂÃÂ­cia ÃÂÃÂÃÂÃÂ  parte! Composta por aproximadamente 1 litro de aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ cremoso e saboroso ou sorvete de qualidade superior, a barca ÃÂÃÂÃÂÃÂ© adornada com complementos deliciosos que realÃÂÃÂÃÂÃÂ§am ainda mais os sabores. AlÃÂÃÂÃÂÃÂ©m disso, oferecemos toppings gratuitos para incrementar a sua experiÃÂÃÂÃÂÃÂªncia gastronÃÂÃÂÃÂÃÂ´mica. Todos os acompanhamentos sÃÂÃÂÃÂÃÂ£o cuidadosamente dispostos dentro da barca, criando uma apresentaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o visual incrÃÂÃÂÃÂÃÂ­vel e apetitosa. Uma indulgÃÂÃÂÃÂÃÂªncia que vocÃÂÃÂÃÂÃÂª merece!",
           "preco_original": 45.99,
           "preco_venda": 34.99,
           "serve": "Serve 3 pessoas",
@@ -113,7 +123,7 @@
         },
         {
           "nome": "Titanic !!",
-          "descricao": "Apresentamos o 'Titanic !!', uma irresistÃÂÃÂ­vel e colossal barca de aÃÂÃÂ§aÃÂÃÂ­ ou sorvete, meticulosamente preparada para satisfazer os paladares mais exigentes. Este prato de proporÃÂÃÂ§ÃÂÃÂµes ÃÂÃÂ©picas ÃÂÃÂ© adornado com uma variedade de complementos deliciosos e frutas frescas, habilmente dispostos para realÃÂÃÂ§ar os sabores vibrantes. Tudo isso em um tamanho sem igual, capaz de acomodar mais acompanhamentos que qualquer outro. A bordo desta embarcaÃÂÃÂ§ÃÂÃÂ£o gastronÃÂÃÂ´mica, todos os acompanhamentos sÃÂÃÂ£o cuidadosamente arranjados, promovendo uma experiÃÂÃÂªncia de sabor verdadeiramente inesquecÃÂÃÂ­vel. Embarque nesta jornada de delÃÂÃÂ­cias!",
+          "descricao": "Apresentamos o 'Titanic !!', uma irresistÃÂÃÂÃÂÃÂ­vel e colossal barca de aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete, meticulosamente preparada para satisfazer os paladares mais exigentes. Este prato de proporÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes ÃÂÃÂÃÂÃÂ©picas ÃÂÃÂÃÂÃÂ© adornado com uma variedade de complementos deliciosos e frutas frescas, habilmente dispostos para realÃÂÃÂÃÂÃÂ§ar os sabores vibrantes. Tudo isso em um tamanho sem igual, capaz de acomodar mais acompanhamentos que qualquer outro. A bordo desta embarcaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o gastronÃÂÃÂÃÂÃÂ´mica, todos os acompanhamentos sÃÂÃÂÃÂÃÂ£o cuidadosamente arranjados, promovendo uma experiÃÂÃÂÃÂÃÂªncia de sabor verdadeiramente inesquecÃÂÃÂÃÂÃÂ­vel. Embarque nesta jornada de delÃÂÃÂÃÂÃÂ­cias!",
           "preco_original": 62.99,
           "preco_venda": 49.99,
           "serve": "Serve 4 pessoas",
@@ -123,8 +133,8 @@
           "ativo": true
         },
         {
-          "nome": "AÃÂÃÂ§aÃÂÃÂ­ ou sorvete 5 litros",
-          "descricao": "Delicie-se com nossa caixa de 5 litros de aÃÂÃÂ§aÃÂÃÂ­, oferecida a um preÃÂÃÂ§o irresistÃÂÃÂ­vel. Em nossa promoÃÂÃÂ§ÃÂÃÂ£o especial, vocÃÂÃÂª ganha 1 litro adicional gratuitamente, uma generosidade que sÃÂÃÂ³ aumenta o sabor do negÃÂÃÂ³cio. Todos os acompanhamentos, criteriosamente selecionados para complementar a riqueza do aÃÂÃÂ§aÃÂÃÂ­, sÃÂÃÂ£o enviados separadamente em embalagens seguras, mantendo sua frescura e integridade intactas. As exceÃÂÃÂ§ÃÂÃÂµes sÃÂÃÂ£o as caldas, jÃÂÃÂ¡ inclusas no aÃÂÃÂ§aÃÂÃÂ­, adicionando uma doÃÂÃÂ§ura equilibrada e intensificando a experiÃÂÃÂªncia gustativa. Aproveite esta oferta tentadora!",
+          "nome": "AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete 5 litros",
+          "descricao": "Delicie-se com nossa caixa de 5 litros de aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­, oferecida a um preÃÂÃÂÃÂÃÂ§o irresistÃÂÃÂÃÂÃÂ­vel. Em nossa promoÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o especial, vocÃÂÃÂÃÂÃÂª ganha 1 litro adicional gratuitamente, uma generosidade que sÃÂÃÂÃÂÃÂ³ aumenta o sabor do negÃÂÃÂÃÂÃÂ³cio. Todos os acompanhamentos, criteriosamente selecionados para complementar a riqueza do aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­, sÃÂÃÂÃÂÃÂ£o enviados separadamente em embalagens seguras, mantendo sua frescura e integridade intactas. As exceÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes sÃÂÃÂÃÂÃÂ£o as caldas, jÃÂÃÂÃÂÃÂ¡ inclusas no aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­, adicionando uma doÃÂÃÂÃÂÃÂ§ura equilibrada e intensificando a experiÃÂÃÂÃÂÃÂªncia gustativa. Aproveite esta oferta tentadora!",
           "preco_original": 174.95,
           "preco_venda": 111.99,
           "serve": "Serve 4 pessoas",
@@ -139,8 +149,8 @@
       "nome": "Super Combos",
       "itens": [
         {
-          "nome": "1 Salgado + 1 aÃÂÃÂ§aÃÂÃÂ­ de 400ml",
-          "descricao": "Delicie-se com um dos nossos irresistÃÂÃÂ­veis salgados, cuidadosamente preparados para encantar o seu paladar. Depois, permita-se criar o seu prÃÂÃÂ³prio aÃÂÃÂ§aÃÂÃÂ­ ou sorvete, selecionando a partir de uma variedade de deliciosas e frescas opÃÂÃÂ§ÃÂÃÂµes que temos a oferecer. E o melhor de tudo? VocÃÂÃÂª pode desfrutar dessas maravilhas gastronÃÂÃÂ´micas a um preÃÂÃÂ§o absolutamente acessÃÂÃÂ­vel. Este ÃÂÃÂ© o nosso 'Super Combo': uma combinaÃÂÃÂ§ÃÂÃÂ£o perfeita de sabor e valor.",
+          "nome": "1 Salgado + 1 aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ de 400ml",
+          "descricao": "Delicie-se com um dos nossos irresistÃÂÃÂÃÂÃÂ­veis salgados, cuidadosamente preparados para encantar o seu paladar. Depois, permita-se criar o seu prÃÂÃÂÃÂÃÂ³prio aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete, selecionando a partir de uma variedade de deliciosas e frescas opÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes que temos a oferecer. E o melhor de tudo? VocÃÂÃÂÃÂÃÂª pode desfrutar dessas maravilhas gastronÃÂÃÂÃÂÃÂ´micas a um preÃÂÃÂÃÂÃÂ§o absolutamente acessÃÂÃÂÃÂÃÂ­vel. Este ÃÂÃÂÃÂÃÂ© o nosso 'Super Combo': uma combinaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o perfeita de sabor e valor.",
           "preco_original": 25,
           "preco_venda": 24.49,
           "serve": "Serve 1 pessoa",
@@ -150,8 +160,8 @@
           "ativo": true
         },
         {
-          "nome": "X-tudo Supreme + AÃÂÃÂ§aÃÂÃÂ­ 400ml",
-          "descricao": "PotÃÂÃÂªncia total para sua fome e energia para o seu Dia! Um X Tudo com hambÃÂÃÂºrguer suculento, bacon crocante, ovo no ponto, queijo derretido, batata palha e molho especial, acompanhado de um super aÃÂÃÂ§aÃÂÃÂ­ de 400ml para fechar essa experiÃÂÃÂªncia fantÃÂÃÂ¡stica com chave de ouro. Sabor que satisfaz o paladar e recarrega suas forÃÂÃÂ§as!",
+          "nome": "X-tudo Supreme + AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ 400ml",
+          "descricao": "PotÃÂÃÂÃÂÃÂªncia total para sua fome e energia para o seu Dia! Um X Tudo com hambÃÂÃÂÃÂÃÂºrguer suculento, bacon crocante, ovo no ponto, queijo derretido, batata palha e molho especial, acompanhado de um super aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ de 400ml para fechar essa experiÃÂÃÂÃÂÃÂªncia fantÃÂÃÂÃÂÃÂ¡stica com chave de ouro. Sabor que satisfaz o paladar e recarrega suas forÃÂÃÂÃÂÃÂ§as!",
           "preco_original": null,
           "preco_venda": 31.99,
           "serve": null,
@@ -161,8 +171,8 @@
           "ativo": true
         },
         {
-          "nome": "2 Salgados + AÃÂÃÂ§aÃÂÃÂ­ de 1,1 Litro",
-          "descricao": "Um combo ideal para dividir com aquela pessoa especial, sÃÂÃÂ£o 2 deliciosos salgados fresquinhos e um super aÃÂÃÂ§aÃÂÃÂ­ ou sorvete de 1,1 Litro!! Aproveite.",
+          "nome": "2 Salgados + AÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ de 1,1 Litro",
+          "descricao": "Um combo ideal para dividir com aquela pessoa especial, sÃÂÃÂÃÂÃÂ£o 2 deliciosos salgados fresquinhos e um super aÃÂÃÂÃÂÃÂ§aÃÂÃÂÃÂÃÂ­ ou sorvete de 1,1 Litro!! Aproveite.",
           "preco_original": 52,
           "preco_venda": 47.99,
           "serve": "Serve 2 pessoas",
@@ -222,7 +232,7 @@
         },
         {
           "nome": "Italiano 4 queijos",
-          "descricao": "Massa macia e dourada recheada com a mistura cremosa de mussarela, provolone, parmesÃÂÃÂ£o e Catupiry.",
+          "descricao": "Massa macia e dourada recheada com a mistura cremosa de mussarela, provolone, parmesÃÂÃÂÃÂÃÂ£o e Catupiry.",
           "preco_original": null,
           "preco_venda": 10.99,
           "serve": null,
@@ -332,7 +342,7 @@
         },
         {
           "nome": "Coxinha de Frango",
-          "descricao": "Frango bem temperado, massa leve e crocÃÂÃÂ¢ncia de respeito.",
+          "descricao": "Frango bem temperado, massa leve e crocÃÂÃÂÃÂÃÂ¢ncia de respeito.",
           "preco_original": null,
           "preco_venda": 12.49,
           "serve": null,
@@ -354,7 +364,7 @@
         },
         {
           "nome": "Risole de carne",
-          "descricao": "Massa crocante por fora e macia por dentro, recheada com carne moÃÂÃÂ­da bem temperada.",
+          "descricao": "Massa crocante por fora e macia por dentro, recheada com carne moÃÂÃÂÃÂÃÂ­da bem temperada.",
           "preco_original": null,
           "preco_venda": 12.49,
           "serve": null,
@@ -387,7 +397,7 @@
         },
         {
           "nome": "Kibe",
-          "descricao": "Kibe bem temperadinho, frito na hora e com sabor irresistÃÂÃÂ­vel!",
+          "descricao": "Kibe bem temperadinho, frito na hora e com sabor irresistÃÂÃÂÃÂÃÂ­vel!",
           "preco_original": null,
           "preco_venda": 12.49,
           "serve": null,
@@ -397,7 +407,7 @@
           "ativo": true
         },
         {
-          "nome": "Bolinho de aipim com carne moÃÂÃÂ­da",
+          "nome": "Bolinho de aipim com carne moÃÂÃÂÃÂÃÂ­da",
           "descricao": "Bolinho de aipim frito na hora, super temperado, crocante por fora e macio por dentro.",
           "preco_original": null,
           "preco_venda": 12.49,
@@ -413,8 +423,8 @@
       "nome": "Hamburguers",
       "itens": [
         {
-          "nome": "O ClÃÂÃÂ¡ssico",
-          "descricao": "PÃÂÃÂ£o, 1 carne, queijo, batata palha e molho especial da casa.\n Simples, direto e cheio de sabor. Aquele lanche que nÃÂÃÂ£o precisa exagerar pra ser incrÃÂÃÂ­vel.",
+          "nome": "O ClÃÂÃÂÃÂÃÂ¡ssico",
+          "descricao": "PÃÂÃÂÃÂÃÂ£o, 1 carne, queijo, batata palha e molho especial da casa.\n Simples, direto e cheio de sabor. Aquele lanche que nÃÂÃÂÃÂÃÂ£o precisa exagerar pra ser incrÃÂÃÂÃÂÃÂ­vel.",
           "preco_original": null,
           "preco_venda": 14.99,
           "serve": null,
@@ -425,7 +435,7 @@
         },
         {
           "nome": "X-Baconzada",
-          "descricao": "PÃÂÃÂ£o, carne, queijo, bacon crocante, batata palha e molho especial.\n\nO queridinho da quebrada. Queijo derretido, bacon de respeito e muito sabor em cada mordida.",
+          "descricao": "PÃÂÃÂÃÂÃÂ£o, carne, queijo, bacon crocante, batata palha e molho especial.\n\nO queridinho da quebrada. Queijo derretido, bacon de respeito e muito sabor em cada mordida.",
           "preco_original": null,
           "preco_venda": 17.49,
           "serve": null,
@@ -436,7 +446,7 @@
         },
         {
           "nome": "Big X-egg",
-          "descricao": "PÃÂÃÂ£o, carne, queijo, ovo, batata palha e molho especial.\nO verdadeiro gigante dos clÃÂÃÂ¡ssicos: pÃÂÃÂ£o macio com gergelim, hambÃÂÃÂºrguer suculento, ovo frito no ponto perfeito, queijo derretendo, batata palha crocante pra dar aquele toque especial e o nosso molho exclusivo que amarra tudo no sabor. Um lanche completo, crocante e cheio de personalidade!",
+          "descricao": "PÃÂÃÂÃÂÃÂ£o, carne, queijo, ovo, batata palha e molho especial.\nO verdadeiro gigante dos clÃÂÃÂÃÂÃÂ¡ssicos: pÃÂÃÂÃÂÃÂ£o macio com gergelim, hambÃÂÃÂÃÂÃÂºrguer suculento, ovo frito no ponto perfeito, queijo derretendo, batata palha crocante pra dar aquele toque especial e o nosso molho exclusivo que amarra tudo no sabor. Um lanche completo, crocante e cheio de personalidade!",
           "preco_original": null,
           "preco_venda": 17.49,
           "serve": null,
@@ -447,7 +457,7 @@
         },
         {
           "nome": "X-tudo Supreme",
-          "descricao": "PÃÂÃÂ£o, carne, queijo, bacon crocante, ovo, batata palha e molho especial.\nAqui o papo ÃÂÃÂ© reto: pÃÂÃÂ£o com gergilim, carne suculenta, ovo estalado, bacon crocante, queijo derretendo, batata palha crocante e nosso molho especial feito na casa. ÃÂÃÂ pesado, ÃÂÃÂ© saboroso e ÃÂÃÂ© pra quem respeita um lanche de verdade.",
+          "descricao": "PÃÂÃÂÃÂÃÂ£o, carne, queijo, bacon crocante, ovo, batata palha e molho especial.\nAqui o papo ÃÂÃÂÃÂÃÂ© reto: pÃÂÃÂÃÂÃÂ£o com gergilim, carne suculenta, ovo estalado, bacon crocante, queijo derretendo, batata palha crocante e nosso molho especial feito na casa. ÃÂÃÂÃÂÃÂ pesado, ÃÂÃÂÃÂÃÂ© saboroso e ÃÂÃÂÃÂÃÂ© pra quem respeita um lanche de verdade.",
           "preco_original": null,
           "preco_venda": 18.99,
           "serve": null,
@@ -458,7 +468,7 @@
         },
         {
           "nome": "X-Supreme Duplo",
-          "descricao": "PÃÂÃÂ£o,  2 carnes, 2 fatias de queijo, bacon crocante, 2 ovos, batata palha e molho especial.\nDois andares de respeito! HambÃÂÃÂºrguer duplo , ovos fritos no ponto, bacon crocante, queijo derretendo, batata palha e o nosso molho especial que segura essa bagunÃÂÃÂ§a deliciosa. Aqui ÃÂÃÂ© lanche pra quem tem fome de verdade e coragem pra encarar!",
+          "descricao": "PÃÂÃÂÃÂÃÂ£o,  2 carnes, 2 fatias de queijo, bacon crocante, 2 ovos, batata palha e molho especial.\nDois andares de respeito! HambÃÂÃÂÃÂÃÂºrguer duplo , ovos fritos no ponto, bacon crocante, queijo derretendo, batata palha e o nosso molho especial que segura essa bagunÃÂÃÂÃÂÃÂ§a deliciosa. Aqui ÃÂÃÂÃÂÃÂ© lanche pra quem tem fome de verdade e coragem pra encarar!",
           "preco_original": null,
           "preco_venda": 24.99,
           "serve": null,
