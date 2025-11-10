@@ -1,4 +1,4 @@
-const CACHE_NAME = 'acai-cia-v2';
+const CACHE_NAME = 'acai-cia-v3';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -53,26 +53,107 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response;
         }
-        
+
         // Clone da requisição
         const fetchRequest = event.request.clone();
-        
+
         return fetch(fetchRequest).then((response) => {
           // Verifica se recebeu uma resposta válida
           if (!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
-          
+
           // Clone da resposta
           const responseToCache = response.clone();
-          
+
           caches.open(CACHE_NAME)
             .then((cache) => {
               cache.put(event.request, responseToCache);
             });
-          
+
           return response;
         });
       })
+  );
+});
+
+// Event listener para notificações push
+self.addEventListener('push', (event) => {
+  console.log('Push recebido:', event);
+
+  let notificationData = {
+    title: 'Açaí & Cia',
+    body: 'Nova notificação!',
+    icon: '/IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png',
+    badge: '/IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png',
+    data: {
+      url: '/'
+    }
+  };
+
+  // Se houver dados no push, usar
+  if (event.data) {
+    try {
+      const data = event.data.json();
+      notificationData = {
+        title: data.title || notificationData.title,
+        body: data.body || notificationData.body,
+        icon: data.icon || notificationData.icon,
+        image: data.image || undefined,
+        badge: data.badge || notificationData.badge,
+        data: {
+          url: data.url || notificationData.data.url,
+          ...data.data
+        },
+        actions: data.actions || []
+      };
+    } catch (e) {
+      console.error('Erro ao parsear dados do push:', e);
+    }
+  }
+
+  const promiseChain = self.registration.showNotification(
+    notificationData.title,
+    {
+      body: notificationData.body,
+      icon: notificationData.icon,
+      image: notificationData.image,
+      badge: notificationData.badge,
+      data: notificationData.data,
+      actions: notificationData.actions,
+      vibrate: [200, 100, 200],
+      requireInteraction: false
+    }
+  );
+
+  event.waitUntil(promiseChain);
+});
+
+// Event listener para cliques em notificações
+self.addEventListener('notificationclick', (event) => {
+  console.log('Clique na notificação:', event);
+
+  event.notification.close();
+
+  // URL para abrir quando clicar na notificação
+  const urlToOpen = event.notification.data?.url || '/';
+
+  event.waitUntil(
+    clients.matchAll({
+      type: 'window',
+      includeUncontrolled: true
+    })
+    .then((windowClients) => {
+      // Verificar se já existe uma janela aberta
+      for (let client of windowClients) {
+        if (client.url === urlToOpen && 'focus' in client) {
+          return client.focus();
+        }
+      }
+      // Se não houver janela aberta, abrir nova
+      if (clients.openWindow) {
+        return clients.openWindow(urlToOpen);
+      }
+    })
   );
 });
