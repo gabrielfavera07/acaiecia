@@ -10,47 +10,7 @@
       "timestamp": "2025-11-09T23:53:20.036Z",
       "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
     },
-    {
-      "endpoint": "https://jmt17.google.com/fcm/send/fgqb3k7FBfg:APA91bGrcTRu2VNgW-WjIrLpi-xbwpmz92c2hgHmptmwe41-9CXFgrAKJ08IOuhAlxqtMXfbW7FZ5XjZ0pgZkKs0St5h2Qy0i9BVvKXF3m43ixvVI_QDNeOSMSMm_SKq1cBW7Povx_hJ",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BJgzjvMCmUw8tn_9RFta0t1esFZw0tW1OPHgRQr6UwfG961PEuPmhLCk_t8ivwv72o4vVDIWTDcvdK5qib99kfs",
-        "auth": "tqJn0G-Eczqkd3qqyADK2w"
-      },
-      "timestamp": "2025-11-09T23:54:08.624Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
-    },
-    {
-      "endpoint": "https://fcm.googleapis.com/fcm/send/cNz5vi2JEwE:APA91bEvZqq6mxjqMY6l7xwcXpzHad8SiRELnZiJqKJ9RHkbYII99RfWsxKrOvz5EadfWSp011tmktrqBiHGMO72sTLyIeMpu4e-wA4g10RR1FJoCOEyvBmr9DvFu8bHW6Ps1Zyg70Qf",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BCfHpZoF-N0FYzOASFjT306Y6oi_KG6Flh6NJS7LTTLOCH6GoYnlaLLrlCqd2W5AcByHSMHG4kv0d8bM_V9-FfM",
-        "auth": "X6T1bs16D_t19eYjKY2PJg"
-      },
-      "timestamp": "2025-11-09T23:54:35.092Z",
-      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"
-    },
-    {
-      "endpoint": "https://jmt17.google.com/fcm/send/cCYBudfwEOc:APA91bHhNpwqD1ApeEQoyXrUVcMm81MlEgzD5R2N8icUMmn7gbGhZVGxnAXpus-tKeyXDdET5wxQGDgnF9BHoW5_iMe_Knd3CQsmaZF13Pe6969qQAmz3Hm92e892YnB9Fq8olHaODiv",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BKGx71vik3NkCNk1WR6cgwsgYFVgvr-yauPAq2Qz4J4vU31NTHPs8pQzuAErkGOwO6c_lP0RFUnEDenEBydJukI",
-        "auth": "iTIL6oTZY2EZSaF3pox2rA"
-      },
-      "timestamp": "2025-11-10T00:25:40.621Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
-    },
-    {
-      "endpoint": "https://jmt17.google.com/fcm/send/dUjdMK8arSM:APA91bE23lnZMIO9h9iZ1UilPjb21sOAP6IS18wRUfvXI1GjmClhVj27VrgcclOh1xzcfXMgDa6DOvRBRzlcR5gnCRur_aGwnwkK45E8l5g6VQJmQHYDb2mkOf1BILiBCcMWZ28fxmGn",
-      "expirationTime": null,
-      "keys": {
-        "p256dh": "BGr9DQ5796CXm4QCih5avSWHbyi4IiHCtrFyo8rZZZPb0LgB8W2lwXeuH_ER9bPDNV9RY0M_PiOhwPPviq_2pas",
-        "auth": "1hN6IjnB8qI2KztqYMJxiQ"
-      },
-      "timestamp": "2025-11-10T00:26:15.706Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
-    }
-  ],
+   ],
   "restaurante": {
     "id": "d9300296-0db8-4a3b-93ec-a1e9c8cd0deb",
     "nome": "Açaí & Cia",
