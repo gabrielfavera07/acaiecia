@@ -4,6 +4,10 @@
   publish = "."
   command = "echo 'Site ready'"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 # Headers CORS - Permitir acesso do painel admin
 [[headers]]
   for = "/products_with_prices.json"
