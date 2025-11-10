@@ -5,11 +5,17 @@ let installBannerDismissed = false;
 
 // Detecta se o app está rodando como PWA instalado
 function isRunningAsPWA() {
-  return (
-    window.matchMedia('(display-mode: standalone)').matches ||
-    window.navigator.standalone === true ||
-    document.referrer.includes('android-app://')
-  );
+  const standalone = window.matchMedia('(display-mode: standalone)').matches;
+  const iosStandalone = window.navigator.standalone === true;
+  const androidApp = document.referrer.includes('android-app://');
+
+  console.log('🔍 PWA Detection Debug:');
+  console.log('  - display-mode: standalone?', standalone);
+  console.log('  - iOS standalone?', iosStandalone);
+  console.log('  - Android app?', androidApp);
+  console.log('  - User Agent:', navigator.userAgent);
+
+  return standalone || iosStandalone || androidApp;
 }
 
 // Cria o banner de instalação
