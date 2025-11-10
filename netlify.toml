@@ -1,4 +1,5 @@
 # Configuração Netlify para o Site Principal
+# Updated: 2025-11-10 - New GitHub token configured
 
 [build]
   publish = "."
