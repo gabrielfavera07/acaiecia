@@ -153,8 +153,8 @@ window.sendPushNotification = async function() {
         const notificationData = {
             title: title,
             body: message,
-            icon: '/IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png',
-            badge: '/IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png',
+            icon: 'https://em-content.zobj.net/source/apple/391/bubble-tea_1f9cb.png',
+            badge: 'https://em-content.zobj.net/source/apple/391/bubble-tea_1f9cb.png',
             image: imageUrl || undefined,
             data: {
                 url: targetUrl || '/'
