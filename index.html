@@ -56,9 +56,6 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="notify-btn" id="enable-notifications-btn" title="Ativar notificações para receber ofertas">
-                    <i class="fas fa-bell"></i>
-                </button>
                 <button class="cart-btn" id="cart-icon-header">
                     <i class="fas fa-shopping-bag"></i>
                     <span id="cart-count">0</span>
@@ -187,26 +184,12 @@
 
     <!-- Inicializar Push Notifications -->
     <script>
-        // Função para detectar se está rodando como PWA
-        function isRunningAsPWA() {
-            return (
-                window.matchMedia('(display-mode: standalone)').matches ||
-                window.navigator.standalone === true ||
-                document.referrer.includes('android-app://')
-            );
-        }
-
         // Aguardar o DOM carregar completamente
         document.addEventListener('DOMContentLoaded', async () => {
-            // Esconder completamente o botão de sino (usar banner no PWA)
-            const notifyBtn = document.getElementById('enable-notifications-btn');
-            if (notifyBtn) {
-                // Sempre esconder - usaremos banner no PWA
-                notifyBtn.style.display = 'none';
-            }
-
             // Inicializar o gerenciador de push notifications
-            await PushNotificationManager.init();
+            if (window.PushNotificationManager) {
+                await PushNotificationManager.init();
+            }
         });
     </script>
 </body>
