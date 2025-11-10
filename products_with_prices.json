@@ -49,6 +49,16 @@
       },
       "timestamp": "2025-11-10T17:07:13.646Z",
       "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"
+    },
+    {
+      "endpoint": "https://web.push.apple.com/QBAgHNWwSDwVf0MFqmMqd5OFDgXbLuNCBhsDdV5DxrIwlvUlvmHygi2fkixLv9cOZQqKBd-J6OgUTsG3am9AHZHfXhofY1gEMRIByHrF84CoojBzaTcM8Ggnun0yIZzdbO4uOHAaz1ITobMasZShXFCSnRsoNTW1KQ_eIRZHr_s",
+      "expirationTime": null,
+      "keys": {
+        "p256dh": "BFwg4yNfTZoTEn8KIGnVjlpREbbEJmIHAgm/Wp6DAk5YO5ftS6DCdP732boHa0oAl9rKQAdt5QyTo2Si4Dyy2Q8=",
+        "auth": "1VMXtnY2HMazVKdfaVhJ9A=="
+      },
+      "timestamp": "2025-11-10T17:22:49.037Z",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1"
     }
   ],
   "restaurante": {
