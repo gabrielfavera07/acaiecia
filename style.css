@@ -391,6 +391,48 @@ h1, h2, h3, h4 {
     font-weight: 700;
 }
 
+/* Notification Button */
+.notify-btn {
+    position: relative;
+    /* Esconder na versão web, mostrar apenas no PWA */
+    display: none !important;
+}
+
+/* Mostrar botão apenas quando estiver no PWA (standalone mode) */
+@media all and (display-mode: standalone) {
+    .notify-btn {
+        display: inline-flex !important;
+    }
+}
+
+.notify-btn.subscribed {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.notify-btn.subscribed:hover {
+    background-color: #6a1b6d;
+}
+
+.notify-btn::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.notify-btn.subscribed::after {
+    opacity: 1;
+}
+
 .menu-toggle {
     display: none;
 }
