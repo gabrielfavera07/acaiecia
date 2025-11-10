@@ -131,6 +131,116 @@ window.addEventListener('load', () => {
   }, 2000); // Mostra após 2 segundos
 });
 
+// ===== BANNER DE NOTIFICAÇÕES (APENAS NO PWA) =====
+
+// Cria o banner de notificações (só aparece no PWA)
+async function createNotificationBanner() {
+  // Só mostrar no PWA
+  if (!isRunningAsPWA()) {
+    return;
+  }
+
+  // Verificar se já existe
+  if (document.getElementById('notification-banner')) {
+    return;
+  }
+
+  // Verificar se já tem permissão de notificação
+  if (Notification.permission === 'granted') {
+    // Verifica se está inscrito
+    try {
+      const registration = await navigator.serviceWorker.ready;
+      const subscription = await registration.pushManager.getSubscription();
+      if (subscription) {
+        // Já está inscrito, não mostrar banner
+        return;
+      }
+    } catch (error) {
+      console.error('Erro ao verificar subscription:', error);
+    }
+  }
+
+  const banner = document.createElement('div');
+  banner.id = 'notification-banner';
+  banner.className = 'pwa-install-banner notification-banner';
+  banner.innerHTML = `
+    <div class="pwa-banner-content">
+      <div class="pwa-banner-icon">
+        <i class="fas fa-bell" style="font-size: 32px; color: var(--primary-color);"></i>
+      </div>
+      <div class="pwa-banner-text">
+        <h3>Ative as Notificações!</h3>
+        <p>Não perca nossas promoções incríveis e novidades! 🎉</p>
+      </div>
+      <button class="pwa-banner-install-btn" id="notification-banner-btn">
+        <i class="fas fa-bell"></i>
+        Ativar Agora
+      </button>
+    </div>
+  `;
+
+  document.body.appendChild(banner);
+
+  // Animação de entrada
+  setTimeout(() => {
+    banner.classList.add('show');
+  }, 1000);
+
+  // Botão de ativar
+  const activateBtn = banner.querySelector('#notification-banner-btn');
+  activateBtn.addEventListener('click', async () => {
+    if (window.PushNotificationManager) {
+      const success = await window.PushNotificationManager.requestPermission();
+      if (success) {
+        // Fechar banner após ativação bem-sucedida
+        closeNotificationBanner();
+      }
+    }
+  });
+}
+
+// Fecha o banner de notificações
+function closeNotificationBanner() {
+  const banner = document.getElementById('notification-banner');
+  if (banner) {
+    banner.classList.remove('show');
+    setTimeout(() => {
+      banner.remove();
+    }, 300);
+  }
+}
+
+// Monitorar mudanças na permissão de notificação
+function monitorNotificationPermission() {
+  if (!isRunningAsPWA()) return;
+
+  // Verificar periodicamente se as notificações foram ativadas
+  setInterval(async () => {
+    if (Notification.permission === 'granted') {
+      try {
+        const registration = await navigator.serviceWorker.ready;
+        const subscription = await registration.pushManager.getSubscription();
+        if (subscription) {
+          // Notificações ativadas, fechar banner
+          closeNotificationBanner();
+        }
+      } catch (error) {
+        // Ignorar erros silenciosamente
+      }
+    }
+  }, 2000);
+}
+
+// Inicializar banner de notificações no PWA
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    if (isRunningAsPWA()) {
+      createNotificationBanner();
+      monitorNotificationPermission();
+    }
+  }, 3000); // Mostra após 3 segundos (depois do banner de instalação)
+});
+
 // Registra o Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
