@@ -9,6 +9,16 @@
       },
       "timestamp": "2025-11-10T18:07:56.413Z",
       "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"
+    },
+    {
+      "endpoint": "https://jmt17.google.com/fcm/send/c5j8XsVTs_I:APA91bEUJde0D2gsaDi0bB7W5X8OsV0hJILRp1whzAlrRUGxdv_MPHoz5aHp2JctnI5x4-FwrQG28NCbS2-Thw8jVdMrz-Vg6rNha4IeKNIxazSyD7ZWp6bcT2U4xxycI0-SZYXCQIVj",
+      "expirationTime": null,
+      "keys": {
+        "p256dh": "BMGSgqA4bzl+fV4jI3rKukcQ+NQARnu22pj7P2VXZhbNfi+Dgb84RbpEWJSY7+PlaeVOYnJAIk4+AguHhSPbooA=",
+        "auth": "XgM2ZuaVqD+re8cORTWgzQ=="
+      },
+      "timestamp": "2025-11-10T18:10:50.328Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
     }
   ],
   "restaurante": {
