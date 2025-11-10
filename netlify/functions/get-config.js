@@ -24,8 +24,8 @@ exports.handler = async (event, context) => {
             statusCode: 200,
             headers,
             body: JSON.stringify({
-                VAPID_PUBLIC_KEY: process.env.VAPID_PUBLIC_KEY || '',
-                // NÃO incluir GITHUB_TOKEN ou VAPID_PRIVATE_KEY aqui!
+                VAPID_PUBLIC_KEY: process.env.PUSH_PUBLIC_KEY || '',
+                // NÃO incluir GITHUB_TOKEN ou PUSH_PRIVATE_KEY aqui!
             })
         };
     } catch (error) {
