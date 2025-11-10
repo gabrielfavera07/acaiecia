@@ -71,9 +71,15 @@ exports.handler = async (event, context) => {
                 console.error('Erro ao enviar notificação:', error);
                 // Se a subscription expirou (410), remover do array
                 if (error.statusCode === 410) {
-                    return { success: false, endpoint: subscription.endpoint, expired: true };
+                    return { success: false, endpoint: subscription.endpoint, expired: true, error: error.message };
                 }
-                return { success: false, endpoint: subscription.endpoint, error: error.message };
+                return {
+                    success: false,
+                    endpoint: subscription.endpoint,
+                    error: error.message,
+                    statusCode: error.statusCode,
+                    body: error.body
+                };
             }
         });
 
@@ -85,6 +91,16 @@ exports.handler = async (event, context) => {
         const expiredSubscriptions = results
             .filter(r => r.status === 'fulfilled' && r.value.expired)
             .map(r => r.value.endpoint);
+
+        // Coletar erros para debug
+        const errors = results
+            .filter(r => r.status === 'fulfilled' && !r.value.success)
+            .map(r => ({
+                endpoint: r.value.endpoint,
+                error: r.value.error,
+                statusCode: r.value.statusCode,
+                body: r.value.body
+            }));
 
         console.log(`✅ ${successCount} notificações enviadas com sucesso`);
         console.log(`❌ ${failureCount} falhas`);
@@ -100,7 +116,8 @@ exports.handler = async (event, context) => {
                 totalCount: subscriptions.length,
                 successCount: successCount,
                 failureCount: failureCount,
-                expiredSubscriptions: expiredSubscriptions
+                expiredSubscriptions: expiredSubscriptions,
+                errors: errors // Incluir erros para debug
             })
         };
 
