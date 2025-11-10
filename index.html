@@ -198,32 +198,11 @@
 
         // Aguardar o DOM carregar completamente
         document.addEventListener('DOMContentLoaded', async () => {
-            // Mostrar/esconder botão de notificação baseado em PWA
+            // Esconder completamente o botão de sino (usar banner no PWA)
             const notifyBtn = document.getElementById('enable-notifications-btn');
             if (notifyBtn) {
-                if (isRunningAsPWA()) {
-                    // Está no PWA, mostrar botão
-                    notifyBtn.style.display = 'inline-flex';
-                } else {
-                    // Está na web, esconder botão
-                    notifyBtn.style.display = 'none';
-                }
-
-                // Event listener do botão
-                notifyBtn.addEventListener('click', async () => {
-                    const registration = await navigator.serviceWorker.ready;
-                    const subscription = await registration.pushManager.getSubscription();
-
-                    if (subscription) {
-                        // Já está inscrito, perguntar se quer cancelar
-                        if (confirm('Deseja desativar as notificações?')) {
-                            await PushNotificationManager.unsubscribe();
-                        }
-                    } else {
-                        // Não está inscrito, solicitar permissão
-                        await PushNotificationManager.requestPermission();
-                    }
-                });
+                // Sempre esconder - usaremos banner no PWA
+                notifyBtn.style.display = 'none';
             }
 
             // Inicializar o gerenciador de push notifications
