@@ -135,24 +135,32 @@ window.addEventListener('load', () => {
 
 // Cria o banner de notificações (só aparece no PWA)
 async function createNotificationBanner() {
+  console.log('🔔 createNotificationBanner chamado');
+
   // Só mostrar no PWA
   if (!isRunningAsPWA()) {
+    console.log('❌ Não está rodando como PWA');
     return;
   }
 
+  console.log('✅ Está rodando como PWA');
+
   // Verificar se já existe
   if (document.getElementById('notification-banner')) {
+    console.log('⚠️ Banner já existe');
     return;
   }
 
   // Verificar se já tem permissão de notificação
   if (Notification.permission === 'granted') {
+    console.log('🔍 Verificando subscription...');
     // Verifica se está inscrito
     try {
       const registration = await navigator.serviceWorker.ready;
       const subscription = await registration.pushManager.getSubscription();
       if (subscription) {
         // Já está inscrito, não mostrar banner
+        console.log('✅ Já está inscrito, não mostrar banner');
         return;
       }
     } catch (error) {
@@ -160,13 +168,15 @@ async function createNotificationBanner() {
     }
   }
 
+  console.log('📢 Criando banner de notificações...');
+
   const banner = document.createElement('div');
   banner.id = 'notification-banner';
-  banner.className = 'pwa-install-banner notification-banner';
+  banner.className = 'pwa-install-banner';
   banner.innerHTML = `
     <div class="pwa-banner-content">
       <div class="pwa-banner-icon">
-        <i class="fas fa-bell" style="font-size: 32px; color: var(--primary-color);"></i>
+        <i class="fas fa-bell" style="font-size: 40px; color: #7b1fa2;"></i>
       </div>
       <div class="pwa-banner-text">
         <h3>Ative as Notificações!</h3>
@@ -180,19 +190,23 @@ async function createNotificationBanner() {
   `;
 
   document.body.appendChild(banner);
+  console.log('✅ Banner adicionado ao DOM');
 
   // Animação de entrada
   setTimeout(() => {
     banner.classList.add('show');
-  }, 1000);
+    console.log('✅ Banner animado (show class adicionada)');
+  }, 500);
 
   // Botão de ativar
   const activateBtn = banner.querySelector('#notification-banner-btn');
   activateBtn.addEventListener('click', async () => {
+    console.log('🔔 Botão de ativar clicado');
     if (window.PushNotificationManager) {
       const success = await window.PushNotificationManager.requestPermission();
       if (success) {
         // Fechar banner após ativação bem-sucedida
+        console.log('✅ Notificações ativadas, fechando banner');
         closeNotificationBanner();
       }
     }
@@ -233,12 +247,18 @@ function monitorNotificationPermission() {
 
 // Inicializar banner de notificações no PWA
 window.addEventListener('load', () => {
+  console.log('🚀 Página carregada, verificando PWA...');
+  console.log('isRunningAsPWA:', isRunningAsPWA());
+
   setTimeout(() => {
     if (isRunningAsPWA()) {
+      console.log('✅ PWA detectado, criando banner de notificações...');
       createNotificationBanner();
       monitorNotificationPermission();
+    } else {
+      console.log('❌ Não é PWA, não mostrar banner');
     }
-  }, 3000); // Mostra após 3 segundos (depois do banner de instalação)
+  }, 1500); // Mostra após 1.5 segundos
 });
 
 // Registra o Service Worker
