@@ -180,8 +180,19 @@ window.sendPushNotification = async function() {
 
         const result = await response.json();
 
-        showMessage(`✅ Notificação enviada com sucesso para ${result.successCount} de ${result.totalCount} inscritos!`, 'success');
-        closeNotificationsModal();
+        // Debug: mostrar erros se houver
+        if (result.errors && result.errors.length > 0) {
+            console.error('🚨 ERROS DETALHADOS:', result.errors);
+            const firstError = result.errors[0];
+            alert(`❌ Erro ao enviar:\n${firstError.error}\nStatus: ${firstError.statusCode}\nDetalhes: ${firstError.body || 'N/A'}`);
+        }
+
+        if (result.successCount > 0) {
+            showMessage(`✅ Notificação enviada com sucesso para ${result.successCount} de ${result.totalCount} inscritos!`, 'success');
+            closeNotificationsModal();
+        } else {
+            showMessage(`❌ Falha ao enviar para todos os ${result.totalCount} inscritos. Verifique o console.`, 'error');
+        }
 
     } catch (error) {
         console.error('Erro ao enviar notificações:', error);
