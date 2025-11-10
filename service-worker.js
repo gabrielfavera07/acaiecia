@@ -1,4 +1,4 @@
-const CACHE_NAME = 'acai-cia-v3';
+const CACHE_NAME = 'acai-cia-v4';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -8,11 +8,7 @@ const urlsToCache = [
   '/modal-customization.js',
   '/modal-address.js',
   '/modal-map-payment.js',
-  '/products_with_prices.json',
-  '/IMAGENS COM NOME E SEPARADAS POR PASTA/logo.png',
-  '/IMAGENS COM NOME E SEPARADAS POR PASTA/heroimagem.png',
-  '/IMAGENS COM NOME E SEPARADAS POR PASTA/heroimagem22.png',
-  '/IMAGENS COM NOME E SEPARADAS POR PASTA/heroimagem222.png'
+  '/products_with_prices.json'
 ];
 
 // Instalação do Service Worker
@@ -46,6 +42,11 @@ self.addEventListener('activate', (event) => {
 
 // Interceptação de requisições
 self.addEventListener('fetch', (event) => {
+  // Ignorar requisições que não sejam HTTP/HTTPS (ex: chrome-extension://)
+  if (!event.request.url.startsWith('http')) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
