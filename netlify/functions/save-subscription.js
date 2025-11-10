@@ -21,10 +21,10 @@ exports.handler = async (event, context) => {
 
     try {
         const subscription = JSON.parse(event.body);
-        const githubToken = process.env.GITHUB_TOKEN;
+        const githubToken = process.env.PUSH_GITHUB_TOKEN;
 
         if (!githubToken) {
-            throw new Error('GITHUB_TOKEN não configurado');
+            throw new Error('PUSH_GITHUB_TOKEN não configurado');
         }
 
         const GITHUB_CONFIG = {
