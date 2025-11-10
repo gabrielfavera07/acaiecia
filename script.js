@@ -31,8 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 restaurantData = data.restaurante;
                 allCategories = data.categorias || [];
                 populateCategories();
-                populateStickyCategoryMenu(); // Popula o menu sticky
                 renderProducts(); // Render all products initially
+
+                // Aguardar um pouco para garantir que tudo foi renderizado
+                setTimeout(() => {
+                    if (typeof populateStickyCategoryMenu === 'function') {
+                        populateStickyCategoryMenu();
+                    }
+                }, 100);
             })
             .catch(error => console.error('Error loading products:', error));
     }
