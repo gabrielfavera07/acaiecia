@@ -1,5 +1,16 @@
 {
-  "push_subscriptions": [],
+  "push_subscriptions": [
+    {
+      "endpoint": "https://jmt17.google.com/fcm/send/e9oEZ8A1PDg:APA91bH-GieMIf6nvE3S_6xyjIxQacp-amkhXH4_5Qro76bm0FtPl4T8cxXqYanfNa2n0H0spI987xOstIF8UcYsVAJFUaVkCJLzYB30GFe2RTS3yW5YPEEmlBNafBPF_-Mb53WaQGSH",
+      "expirationTime": null,
+      "keys": {
+        "p256dh": "BIDxRwLIGNcDYx5A5g0LpW0YYHOK6jVhBri4zGi6LeXu3INdx5HdVj9n4fznL+8CaG/24z9QprRLWkml3QGyF4c=",
+        "auth": "VfWI/YeeF8RC3nybNTlSpg=="
+      },
+      "timestamp": "2025-11-10T02:59:19.909Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36"
+    }
+  ],
   "restaurante": {
     "id": "d9300296-0db8-4a3b-93ec-a1e9c8cd0deb",
     "nome": "Açaí & Cia",
